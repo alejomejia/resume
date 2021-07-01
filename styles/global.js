@@ -20,7 +20,7 @@ const GlobalCSS = createGlobalStyle`
 
   body{
     position: relative;
-    font-family: 'Poppins', 'Verdana', sans-serif;
+    font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: 16px;
   }
 `
