@@ -1,10 +1,11 @@
 import Head from '../components/Head'
+import Main from '../components/Main'
 
 const Home = () => {
   return (
     <>
       <Head title="Resume :: Alejandro Mejia" />
-      <div>Starting...</div>
+      <Main>Starting...</Main>
     </>
   )
 }

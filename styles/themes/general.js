@@ -30,6 +30,9 @@ const general = {
     s: '768px',
     xs: '550px',
     xxs: '420px'
+  },
+  spacing(val) {
+    return val * 8
   }
 }
 
