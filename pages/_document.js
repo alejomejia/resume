@@ -6,7 +6,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="description" content="Alejandro Mejia's resume" />
-          <link rel="icon" href="/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link

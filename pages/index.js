@@ -5,6 +5,7 @@ const Home = () => {
     <>
       <Head>
         <title>🤘 Resume :: Alejandro Mejia</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div>Starting...</div>
     </>
