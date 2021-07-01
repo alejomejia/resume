@@ -1,12 +1,9 @@
-import Head from 'next/head'
+import Head from '../components/Head'
 
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>🤘 Resume :: Alejandro Mejia</title>
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <Head title="Resume :: Alejandro Mejia" />
       <div>Starting...</div>
     </>
   )
