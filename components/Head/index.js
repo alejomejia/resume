@@ -5,7 +5,6 @@ const Head = ({ title }) => {
   return (
     <HTMLHead>
       <title>{title}</title>
-      <link rel="icon" href="/favicon.png" />
     </HTMLHead>
   )
 }
