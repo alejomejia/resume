@@ -1,11 +1,17 @@
 import Head from '../components/Head'
-import Main from '../components/Main'
+import Container from '../components/Container'
+import Grid from '../components/Grid'
 
 const Home = () => {
   return (
     <>
       <Head title="Resume :: Alejandro Mejia" />
-      <Main>Starting...</Main>
+      <Container>
+        <Grid gap="48px" columns="450px 1fr">
+          <aside>Left Sidebar</aside>
+          <main>Container Content</main>
+        </Grid>
+      </Container>
     </>
   )
 }
