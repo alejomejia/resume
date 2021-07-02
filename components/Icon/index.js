@@ -13,6 +13,7 @@ import IconLinkedIn from './icons/linkedin'
 import IconMailOpen from './icons/mail-open'
 import IconMail from './icons/mail'
 import IconMoon from './icons/moon'
+import IconPencil from './icons/pencil'
 import IconSpeaker from './icons/speaker'
 import IconStar from './icons/star'
 import IconStorybook from './icons/storybook'
@@ -35,6 +36,7 @@ export const SVG = {
   mailOpen: IconMailOpen,
   mail: IconMail,
   moon: IconMoon,
+  pencil: IconPencil,
   speaker: IconSpeaker,
   star: IconStar,
   storybook: IconStorybook,
