@@ -10,6 +10,7 @@
     "cm": "git-cz"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.13.1",
     "git-cz": "^4.7.6",
     "next": "11.0.1",
     "prop-types": "^15.7.2",
