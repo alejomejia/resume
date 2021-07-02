@@ -15,7 +15,7 @@ const Intro = () => {
   const theme = useContext(ThemeContext)
 
   return (
-    <Box mb={theme.spacing(6)}>
+    <Box mb={theme.spacing(6)} pt={theme.spacing(5)}>
       <Component className="intro">
         <div className="content">
           <span className="content__hello">👋🏻</span>

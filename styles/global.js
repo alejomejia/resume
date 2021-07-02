@@ -30,6 +30,21 @@ const GlobalCSS = createGlobalStyle`
   h4 {
     font-family: ${({ theme }) => theme.fonts.family.primary};
   }
+
+  p {
+    color: ${({ theme }) => theme.colors.text200};
+    line-height: 26px;
+    margin-bottom: ${({ theme }) => theme.spacing(2)};
+
+    strong {
+      color: ${({ theme }) => theme.colors.text300};
+      font-weight: ${({ theme }) => theme.fonts.weight.medium};
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 `
 
 export default GlobalCSS
