@@ -18,6 +18,7 @@ const general = {
       secondary: 'Poppins, Verdana, sans-serif'
     },
     weight: {
+      light: 300,
       regular: 400,
       medium: 500,
       semibold: 600,
@@ -32,7 +33,7 @@ const general = {
     xxs: '420px'
   },
   spacing(val) {
-    return val * 8
+    return `${val * 8}px`
   }
 }
 

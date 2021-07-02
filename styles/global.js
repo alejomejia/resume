@@ -23,6 +23,12 @@ const GlobalCSS = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: 16px;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: ${({ theme }) => theme.fonts.family.primary};
+  }
 `
 
 export default GlobalCSS
