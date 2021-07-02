@@ -16,6 +16,7 @@ export const Component = styled.h1`
         props.color ? props.color : props.theme.colors.text300};
       font-size: ${(props) =>
         props.size ? props.size : props.theme.fonts.size.xl};
+      font-family: ${({ theme, family }) => theme.fonts.family[family]};
       font-weight: ${(props) =>
         props.weight ? props.weight : props.theme.fonts.weight.bold};
       font-style: ${(props) => (props.isItalic ? 'italic' : '')};
