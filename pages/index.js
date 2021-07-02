@@ -4,6 +4,7 @@ import Grid from '../components/Grid'
 
 import Intro from '../components/Intro'
 import Skills from '../components/Skills'
+import Languages from '../components/Languages'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           <aside>
             <Intro />
             <Skills />
+            <Languages />
           </aside>
           <main>Container Content</main>
         </Grid>
