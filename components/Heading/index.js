@@ -46,7 +46,7 @@ Heading.propTypes = {
   icon: PropTypes.oneOf(Object.keys(iconNames)),
   iconSize: PropTypes.number,
   mb: PropTypes.string,
-  children: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default Heading

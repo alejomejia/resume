@@ -22,6 +22,7 @@ const GlobalCSS = createGlobalStyle`
     position: relative;
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: 16px;
+    background-color: ${({ theme }) => theme.colors.bg};
   }
 
   h1,

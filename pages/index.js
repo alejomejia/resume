@@ -8,6 +8,7 @@ import Languages from '../components/Languages'
 import Social from '../components/Social'
 
 import About from '../components/About'
+import Experience from '../components/Experience'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
           </aside>
           <main>
             <About />
+            <Experience />
           </main>
         </Grid>
       </Container>

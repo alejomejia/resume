@@ -1,6 +1,7 @@
 export default function handler(req, res) {
   res.status(200).json([
     {
+      id: 1,
       image: '/experience/freelance.png',
       title: 'Product Developer / Web Designer',
       at: 'Freelance',
@@ -11,6 +12,7 @@ export default function handler(req, res) {
         'My work in this nice global company is to build interfaces inside ReactJS. I dont usually work with classes but with hooks. I use libraries like Material UI, Kendo UI and Styled Components. I work with scrum methodology and every day I communicate in English with the team and the client in the United States. I really love how the work in ReactJS can be organized and I always try to make all the components reusable and have all the files and code organized.'
     },
     {
+      id: 2,
       image: '/experience/making-sense.png',
       title: 'SSR UX Developer',
       at: 'MakingSense',
@@ -21,6 +23,7 @@ export default function handler(req, res) {
         'My work in this nice global company is to build interfaces inside ReactJS. I dont usually work with classes but with hooks. I use libraries like Material UI, Kendo UI and Styled Components. I work with scrum methodology and every day I communicate in English with the team and the client in the United States. I really love how the work in ReactJS can be organized and I always try to make all the components reusable and have all the files and code organized.'
     },
     {
+      id: 3,
       image: '/experience/10pearls.png',
       title: 'UI Developer',
       at: '10Pearls',
@@ -31,6 +34,7 @@ export default function handler(req, res) {
         'My work in this nice global company is to build interfaces inside ReactJS. I dont usually work with classes but with hooks. I use libraries like Material UI, Kendo UI and Styled Components. I work with scrum methodology and every day I communicate in English with the team and the client in the United States. I really love how the work in ReactJS can be organized and I always try to make all the components reusable and have all the files and code organized.'
     },
     {
+      id: 4,
       image: '/experience/integro.png',
       title: 'UI Developer',
       at: 'Integ.ro',
