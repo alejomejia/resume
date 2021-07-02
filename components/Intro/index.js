@@ -1,4 +1,6 @@
 import Icon from '../Icon'
+
+// @TODO Improve component naming here
 import Figure1 from './svg/Purple'
 import Figure2 from './svg/Cyan'
 
@@ -14,7 +16,9 @@ const Intro = () => {
         <h2 className="content__job-title">Product Developer</h2>
         <span className="content__location">From Medellin, CO 🇨🇴</span>
         <div className="content__contact">
-          <Icon name="mail" fill="#fff" />
+          <span className="content__icon">
+            <Icon name="mail" fill="#fff" />
+          </span>
           <span className="content__email">alejomejiacuartas@outlook.com</span>
         </div>
       </div>

@@ -47,6 +47,11 @@ export const Component = styled.div`
         margin-top: ${({ theme }) => theme.spacing(7)};
       }
 
+      &__icon {
+        display: flex;
+        align-items: center;
+      }
+
       &__email {
         display: inline-block;
         margin-left: ${({ theme }) => theme.spacing(1)};
