@@ -17,7 +17,7 @@ import IconSpeaker from './icons/speaker'
 import IconStar from './icons/star'
 import IconStorybook from './icons/storybook'
 import IconSun from './icons/sun'
-import IconVolume from './icons/volumne'
+import IconVolume from './icons/volume'
 
 import { Component } from './styled'
 

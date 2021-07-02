@@ -5,6 +5,7 @@ import Grid from '../components/Grid'
 import Intro from '../components/Intro'
 import Skills from '../components/Skills'
 import Languages from '../components/Languages'
+import Social from '../components/Social'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Intro />
             <Skills />
             <Languages />
+            <Social />
           </aside>
           <main>Container Content</main>
         </Grid>
