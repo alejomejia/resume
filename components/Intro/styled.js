@@ -25,6 +25,7 @@ export const Component = styled.div`
 
       &__preffix {
         font-size: ${({ theme }) => theme.fonts.size.xxl};
+        font-weight: ${({ theme }) => theme.fonts.weight.light};
         line-height: 1;
       }
 

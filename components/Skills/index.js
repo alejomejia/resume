@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import Box from '../Box'
 import Heading from '../Heading'
+import Flex from '../Flex'
 import Tag from '../Tag'
 
 const Skills = ({}) => {
@@ -42,9 +43,11 @@ const Skills = ({}) => {
         Hard
       </Heading>
       <Box mb="24px">
-        {hardSkills.map((sk) => (
-          <span key={sk.id}>{sk.name}</span>
-        ))}
+        <Flex wrap="wrap" gap="8px">
+          {hardSkills.map((sk) => (
+            <Tag key={sk.id}>{sk.name}</Tag>
+          ))}
+        </Flex>
       </Box>
       <Heading
         as="h4"
@@ -57,9 +60,11 @@ const Skills = ({}) => {
         Soft
       </Heading>
       <Box mb="24px">
-        {softSkills.map((sk) => (
-          <span key={sk.id}>{sk.name}</span>
-        ))}
+        <Flex wrap="wrap" gap="8px">
+          {softSkills.map((sk) => (
+            <Tag key={sk.id}>{sk.name}</Tag>
+          ))}
+        </Flex>
       </Box>
     </Box>
   )
