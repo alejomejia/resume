@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
+
 import Box from '../Box'
 import Heading from '../Heading'
 import Flex from '../Flex'
@@ -6,12 +9,14 @@ import Icon from '../Icon'
 import { Link } from './styled'
 
 const Social = ({}) => {
+  const theme = useContext(ThemeContext)
+
   return (
-    <Box mb="48px">
-      <Heading as="h3" icon="speaker" mb="12px">
+    <Box mb={theme.spacing(6)}>
+      <Heading as="h3" icon="speaker" mb={theme.spacing(1.5)}>
         Social
       </Heading>
-      <Flex wrap="wrap" gap="8px">
+      <Flex wrap="wrap" gap={theme.spacing(1)}>
         <Link
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"

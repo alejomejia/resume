@@ -28,8 +28,8 @@ const Skills = ({}) => {
   }, [])
 
   return (
-    <Box mb="48px">
-      <Heading as="h3" icon="badge" mb="12px">
+    <Box mb={theme.spacing(6)}>
+      <Heading as="h3" icon="badge" mb={theme.spacing(1.5)}>
         Skills
       </Heading>
       <Heading
@@ -42,8 +42,8 @@ const Skills = ({}) => {
       >
         Hard
       </Heading>
-      <Box mb="24px">
-        <Flex wrap="wrap" gap="8px">
+      <Box mb={theme.spacing(3)}>
+        <Flex wrap="wrap" gap={theme.spacing(1)}>
           {hardSkills.map((sk) => (
             <Tag key={sk.id}>{sk.name}</Tag>
           ))}
@@ -59,8 +59,8 @@ const Skills = ({}) => {
       >
         Soft
       </Heading>
-      <Box mb="24px">
-        <Flex wrap="wrap" gap="8px">
+      <Box mb={theme.spacing(3)}>
+        <Flex wrap="wrap" gap={theme.spacing(1)}>
           {softSkills.map((sk) => (
             <Tag key={sk.id}>{sk.name}</Tag>
           ))}
