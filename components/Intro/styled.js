@@ -28,13 +28,6 @@ export const Component = styled.div`
         line-height: 1;
       }
 
-      &__name {
-        font-size: ${({ theme }) => theme.fonts.size.xxxl};
-        font-weight: ${({ theme }) => theme.fonts.weight.bold};
-        margin-bottom: ${({ theme }) => theme.spacing(2)};
-      }
-
-      &__job-title,
       &__location {
         font-size: ${({ theme }) => theme.fonts.size.l};
         font-family: ${({ theme }) => theme.fonts.family.secondary};
@@ -55,6 +48,10 @@ export const Component = styled.div`
       &__email {
         display: inline-block;
         margin-left: ${({ theme }) => theme.spacing(1)};
+
+        a {
+          color: ${({ theme }) => theme.palette.white};
+        }
       }
     }
 

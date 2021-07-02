@@ -40,7 +40,7 @@ Heading.propTypes = {
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   color: PropTypes.string,
   size: PropTypes.string,
-  family: PropTypes.oneOf('primary', 'secondary'),
+  family: PropTypes.oneOf(['primary', 'secondary']),
   weight: PropTypes.number,
   isItalic: PropTypes.bool,
   icon: PropTypes.oneOf(Object.keys(iconNames)),
