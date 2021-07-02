@@ -26,7 +26,8 @@ const GlobalCSS = createGlobalStyle`
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     font-family: ${({ theme }) => theme.fonts.family.primary};
   }
 `

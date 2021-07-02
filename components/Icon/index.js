@@ -6,7 +6,7 @@ import IconMail from './icons/mail'
 
 import { Component } from './styled'
 
-const SVG = {
+export const SVG = {
   badge: IconBadge,
   chat: IconChat,
   mail: IconMail
