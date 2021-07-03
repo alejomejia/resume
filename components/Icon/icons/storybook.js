@@ -1,6 +1,6 @@
 const IconStorybook = () => {
   return (
-    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
       <g clipPath="url(#clip0)">
         <path
           d="M2.618 18.369L2.001 1.915A1.002 1.002 0 012.94.877L16.935.002a1.002 1.002 0 011.065 1v17.93a1.002 1.002 0 01-1.047 1.001l-13.378-.6a1.002 1.002 0 01-.957-.964z"

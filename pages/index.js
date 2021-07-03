@@ -9,6 +9,7 @@ import Social from '../components/Social'
 
 import About from '../components/About'
 import Experience from '../components/Experience'
+import Portfolio from '../components/Portfolio'
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
           <main>
             <About />
             <Experience />
+            <Portfolio />
           </main>
         </Grid>
       </Container>
