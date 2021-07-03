@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-import Heading from '../../Heading'
-
 import { Component } from './styled'
 
 const ExperienceItem = ({
@@ -42,7 +40,7 @@ const ExperienceItem = ({
           </div>
         </div>
       </header>
-      <div className="experience-item__description">
+      <div className="experience__description">
         <p>{description}</p>
       </div>
     </Component>
