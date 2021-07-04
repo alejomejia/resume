@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import useSound from 'use-sound'
 
 import Icon from '../../Icon'
+import Boop from '../../Boop'
+
 import { Component } from './styled'
 
 const PortfolioItem = ({ title, stack, image, external }) => {
@@ -38,17 +40,18 @@ const PortfolioItem = ({ title, stack, image, external }) => {
             const iconName = buttonIcons[item.type]
 
             return (
-              <a
-                className="portfolio__button"
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                key={item.id}
-                onMouseEnter={handleOnEnter}
-                onClick={handleOnClick}
-              >
-                <Icon name={iconName} width={24} />
-              </a>
+              <Boop key={item.id} config={{ scale: 0.95 }}>
+                <a
+                  className="portfolio__button"
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={handleOnEnter}
+                  onClick={handleOnClick}
+                >
+                  <Icon name={iconName} width={24} />
+                </a>
+              </Boop>
             )
           })}
         </div>
