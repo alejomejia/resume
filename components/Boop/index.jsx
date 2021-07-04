@@ -1,6 +1,6 @@
 import { animated } from 'react-spring'
 import PropTypes from 'prop-types'
-import useBoop from '../../hooks/use-boop'
+import useBoop from 'hooks/use-boop'
 
 const Boop = ({ children, config }) => {
   const [style, trigger] = useBoop(config)

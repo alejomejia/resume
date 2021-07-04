@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-import Icon from '../../Icon'
+import Icon from 'components/Icon'
 import { Component } from './styled'
 
 const RecommendationsItem = ({

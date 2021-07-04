@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import Box from '../Box'
-import Heading from '../Heading'
-import Button from '../Button'
+import Box from 'components/Box'
+import Heading from 'components/Heading'
+import Button from 'components/Button'
 
 import { Component } from './styled'
 

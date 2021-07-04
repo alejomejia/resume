@@ -4,11 +4,11 @@ import useSound from 'use-sound'
 
 import { store } from 'context/store'
 
-import Box from '../Box'
-import Heading from '../Heading'
-import Flex from '../Flex'
-import Icon from '../Icon'
-import Boop from '../Boop'
+import Box from 'components/Box'
+import Heading from 'components/Heading'
+import Flex from 'components/Flex'
+import Icon from 'components/Icon'
+import Boop from 'components/Boop'
 
 import { Link } from './styled'
 
@@ -17,13 +17,13 @@ const Social = ({}) => {
   const { isSoundEnable } = useContext(store)
 
   const [popEnter] = useSound('/sounds/pop.mp3', {
-    volume: 0.1,
+    volume: 0.5,
     soundEnabled: isSoundEnable
   })
 
   const [popClick] = useSound('/sounds/pop.mp3', {
     playbackRate: 0.9,
-    volume: 0.1,
+    volume: 0.5,
     soundEnabled: isSoundEnable
   })
 

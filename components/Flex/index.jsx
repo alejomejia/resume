@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Flex as Component } from './styled'
+import { Component } from './styled'
 
 const Flex = ({ gap, align, justify, direction, wrap, children }) => {
   return (

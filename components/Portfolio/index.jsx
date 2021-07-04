@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
-import Box from '../Box'
-import Heading from '../Heading'
-import Grid from '../Grid'
+import Box from 'components/Box'
+import Heading from 'components/Heading'
+import Grid from 'components/Grid'
 import Item from './Item'
 
 const Portfolio = ({}) => {

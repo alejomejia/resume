@@ -2,10 +2,10 @@ import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
-import Box from '../Box'
-import Heading from '../Heading'
-import Flex from '../Flex'
-import Tag from '../Tag'
+import Box from 'components/Box'
+import Heading from 'components/Heading'
+import Flex from 'components/Flex'
+import Tag from 'components/Tag'
 
 const Skills = ({}) => {
   const theme = useContext(ThemeContext)

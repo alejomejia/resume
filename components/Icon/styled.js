@@ -1,4 +1,4 @@
-import styled, { ThemeConsumer } from 'styled-components'
+import styled from 'styled-components'
 
 export const Component = styled.span`
   display: inline-flex;

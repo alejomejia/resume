@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { Grid as Component } from './styled'
+
+import { Component } from './styled'
 
 const Grid = ({ gap, columns, children }) => {
   return (

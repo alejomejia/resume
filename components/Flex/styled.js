@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Flex = styled.div`
+export const Component = styled.div`
   display: flex;
   gap: ${(props) => props.gap};
   align-items: ${(props) => props.align};

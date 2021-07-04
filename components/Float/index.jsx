@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { store } from '../../context/store'
+import { store } from 'context/store'
 import useSound from 'use-sound'
 
-import Icon from '../Icon'
-import Boop from '../Boop'
+import Icon from 'components/Icon'
+import Boop from 'components/Boop'
 
 import { Component } from './styled'
 
@@ -25,12 +25,12 @@ const Float = () => {
 
   const [soundOn] = useSound('/sounds/sound-on.mp3', {
     playbackRate: 0.9,
-    volume: 0.25
+    volume: 0.5
   })
 
   const [soundOff] = useSound('/sounds/sound-off.mp3', {
     playbackRate: 0.9,
-    volume: 0.25
+    volume: 0.5
   })
 
   const handleTheme = () => {

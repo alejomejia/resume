@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import Box from '../Box'
-import Heading from '../Heading'
-import Icon from '../Icon'
+import Box from 'components/Box'
+import Heading from 'components/Heading'
+import Icon from 'components/Icon'
 
 // @TODO Improve component naming here
-import Figure1 from './svg/Purple'
-import Figure2 from './svg/Cyan'
+import Purple from './svg/Purple'
+import Cyan from './svg/Cyan'
 
 import { Component } from './styled'
 
@@ -50,10 +50,10 @@ const Intro = () => {
         </div>
         <div className="art">
           <div className="art__figure-1">
-            <Figure1 />
+            <Purple />
           </div>
           <div className="art__figure-2">
-            <Figure2 />
+            <Cyan />
           </div>
         </div>
       </Component>
