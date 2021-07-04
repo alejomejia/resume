@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
+import useSound from 'use-sound'
 
 import Box from '../Box'
 import Heading from '../Heading'
@@ -11,6 +12,19 @@ import { Link } from './styled'
 const Social = ({}) => {
   const theme = useContext(ThemeContext)
 
+  const [popEnter] = useSound('/sounds/pop.mp3', {
+    volume: 0.1
+  })
+
+  const [popClick] = useSound('/sounds/pop.mp3', {
+    playbackRate: 0.9,
+    volume: 0.1
+  })
+
+  const handleOnEnter = () => popEnter()
+
+  const handleOnClick = () => popClick()
+
   return (
     <Box mb={theme.spacing(6)}>
       <Heading as="h3" icon="speaker" mb={theme.spacing(1.5)}>
@@ -21,6 +35,8 @@ const Social = ({}) => {
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"
           rel="noreferrer"
+          onMouseEnter={handleOnEnter}
+          onClick={handleOnClick}
         >
           <Icon name="linkedin" width={32} />
         </Link>
@@ -28,6 +44,8 @@ const Social = ({}) => {
           href="https://github.com/alejomejia"
           target="_blank"
           rel="noreferrer"
+          onMouseEnter={handleOnEnter}
+          onClick={handleOnClick}
         >
           <Icon name="github" width={32} />
         </Link>
