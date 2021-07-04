@@ -1,7 +1,7 @@
 // Handle Theme switch
 import { useContext } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { ThemeContext } from '../context/theme'
+import { store } from '../context/store'
 
 import GlobalCSS from '../styles/global'
 import GENERAL from '../styles/themes/general'
@@ -27,7 +27,7 @@ import Recommendations from '../components/Recommendations'
 import Footer from '../components/Footer'
 
 const Home = () => {
-  const { isDarkMode } = useContext(ThemeContext)
+  const { isDarkMode } = useContext(store)
 
   return (
     <ThemeProvider theme={GENERAL}>

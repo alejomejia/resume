@@ -1,10 +1,10 @@
-import { ThemeContextProvider } from '../context/theme'
+import { StoreProvider } from '../context/store'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeContextProvider>
+    <StoreProvider>
       <Component {...pageProps} />
-    </ThemeContextProvider>
+    </StoreProvider>
   )
 }
 

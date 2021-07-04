@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { ThemeContext } from '../../context/theme'
+import { store } from '../../context/store'
 import useSound from 'use-sound'
 
 import Icon from '../Icon'
@@ -8,7 +8,7 @@ import Boop from '../Boop'
 import { Component } from './styled'
 
 const Float = () => {
-  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext)
+  const { isDarkMode, setIsDarkMode } = useContext(store)
 
   const [switchOn] = useSound('/sounds/switch-on.mp3', {
     playbackRate: 0.75,
