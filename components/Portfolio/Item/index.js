@@ -1,10 +1,24 @@
 import PropTypes from 'prop-types'
+import useSound from 'use-sound'
 
 import Icon from '../../Icon'
 import { Component } from './styled'
 
 const PortfolioItem = ({ title, stack, image, external }) => {
   const combinedStack = stack.join(', ')
+
+  const [popEnter] = useSound('/sounds/pop.mp3', {
+    volume: 0.1
+  })
+
+  const [popClick] = useSound('/sounds/pop.mp3', {
+    playbackRate: 0.9,
+    volume: 0.1
+  })
+
+  const handleOnEnter = () => popEnter()
+
+  const handleOnClick = () => popClick()
 
   return (
     <Component className="portfolio-item" image={image}>
@@ -30,6 +44,8 @@ const PortfolioItem = ({ title, stack, image, external }) => {
                 target="_blank"
                 rel="noreferrer"
                 key={item.id}
+                onMouseEnter={handleOnEnter}
+                onClick={handleOnClick}
               >
                 <Icon name={iconName} width={24} />
               </a>
