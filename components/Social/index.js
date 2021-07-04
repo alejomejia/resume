@@ -2,6 +2,8 @@ import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import useSound from 'use-sound'
 
+import { store } from 'context/store'
+
 import Box from '../Box'
 import Heading from '../Heading'
 import Flex from '../Flex'
@@ -12,14 +14,17 @@ import { Link } from './styled'
 
 const Social = ({}) => {
   const theme = useContext(ThemeContext)
+  const { isSoundEnable } = useContext(store)
 
   const [popEnter] = useSound('/sounds/pop.mp3', {
-    volume: 0.1
+    volume: 0.1,
+    soundEnabled: isSoundEnable
   })
 
   const [popClick] = useSound('/sounds/pop.mp3', {
     playbackRate: 0.9,
-    volume: 0.1
+    volume: 0.1,
+    soundEnabled: isSoundEnable
   })
 
   const handleOnEnter = () => popEnter()

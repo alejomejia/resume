@@ -25,12 +25,12 @@ const Float = () => {
 
   const [soundOn] = useSound('/sounds/sound-on.mp3', {
     playbackRate: 0.9,
-    volume: 0.5
+    volume: 0.25
   })
 
   const [soundOff] = useSound('/sounds/sound-off.mp3', {
     playbackRate: 0.9,
-    volume: 0.5
+    volume: 0.25
   })
 
   const handleTheme = () => {

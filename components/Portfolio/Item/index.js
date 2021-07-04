@@ -1,5 +1,8 @@
+import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import useSound from 'use-sound'
+
+import { store } from 'context/store'
 
 import Icon from '../../Icon'
 import Boop from '../../Boop'
@@ -8,14 +11,17 @@ import { Component } from './styled'
 
 const PortfolioItem = ({ title, stack, image, external }) => {
   const combinedStack = stack.join(', ')
+  const { isSoundEnable } = useContext(store)
 
   const [popEnter] = useSound('/sounds/pop.mp3', {
-    volume: 0.1
+    volume: 0.1,
+    soundEnabled: isSoundEnable
   })
 
   const [popClick] = useSound('/sounds/pop.mp3', {
     playbackRate: 0.9,
-    volume: 0.1
+    volume: 0.1,
+    soundEnabled: isSoundEnable
   })
 
   const handleOnEnter = () => popEnter()
