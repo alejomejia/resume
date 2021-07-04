@@ -3,6 +3,7 @@ import { ThemeContext } from '../../context/theme'
 import useSound from 'use-sound'
 
 import Icon from '../Icon'
+import Boop from '../Boop'
 
 import { Component } from './styled'
 
@@ -30,10 +31,14 @@ const Float = () => {
         className="float__switch float__switch--theme"
         onClick={handleTheme}
       >
-        <Icon name={isDarkMode ? 'moon' : 'sun'} width={24} />
+        <Boop config={{ rotate: 48 }}>
+          <Icon name={isDarkMode ? 'moon' : 'sun'} width={24} />
+        </Boop>
       </button>
       <button className="float__switch float__switch--sound">
-        <Icon name="volume" width={24} />
+        <Boop config={{ rotate: 8 }}>
+          <Icon name="volume" width={24} />
+        </Boop>
       </button>
     </Component>
   )
