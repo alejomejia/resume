@@ -29,7 +29,7 @@ const PortfolioItem = ({ title, stack, image, external }) => {
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                key={item.key}
+                key={item.id}
               >
                 <Icon name={iconName} width={24} />
               </a>

@@ -46,6 +46,18 @@ const GlobalCSS = createGlobalStyle`
       margin-bottom: 0;
     }
   }
+
+  small {
+    color: ${({ theme }) => theme.colors.text200};
+    font-size: ${({ theme }) => theme.fonts.size.sm};
+    line-height: 26px;
+    margin-bottom: ${({ theme }) => theme.spacing(2)};
+
+    a {
+      color: ${({ theme }) => theme.palette.primary};
+      font-family: ${({ theme }) => theme.fonts.family.primary};
+    }
+  }
 `
 
 export default GlobalCSS

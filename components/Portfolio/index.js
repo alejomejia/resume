@@ -30,7 +30,7 @@ const Portfolio = ({}) => {
       <Heading as="h3" icon="fire" mb={theme.spacing(3)}>
         Portfolio
       </Heading>
-      <Grid gap="24px" columns="50% 50%">
+      <Grid gap="24px" columns="calc(50% - 12px) calc(50% - 12px)">
         {portfolio.map((item) => (
           <Item
             key={item.id}
