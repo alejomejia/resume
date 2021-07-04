@@ -12,6 +12,8 @@ import Experience from '../components/Experience'
 import Portfolio from '../components/Portfolio'
 import Recommendations from '../components/Recommendations'
 
+import Footer from '../components/Footer'
+
 const Home = () => {
   return (
     <>
@@ -32,6 +34,7 @@ const Home = () => {
           </main>
         </Grid>
       </Container>
+      <Footer />
     </>
   )
 }

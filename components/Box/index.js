@@ -27,7 +27,7 @@ Box.defaultProps = {
 }
 
 Box.propTypes = {
-  as: PropTypes.oneOf(['div', 'section', 'aside', 'article']),
+  as: PropTypes.oneOf(['div', 'section', 'aside', 'article', 'footer']),
   m: PropTypes.string,
   mt: PropTypes.string,
   mr: PropTypes.string,
