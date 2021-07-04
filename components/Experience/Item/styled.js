@@ -1,12 +1,7 @@
 import styled from 'styled-components'
+import Card from '../../Card'
 
-export const Component = styled.article`
-  margin-bottom: ${({ theme }) => theme.spacing(2.5)};
-  padding: ${({ theme }) => theme.spacing(3)};
-  background-color: ${({ theme }) => theme.palette.white};
-  border-radius: 8px;
-  box-shadow: ${({ theme }) => theme.shadows.card};
-
+export const Component = styled(Card)`
   .experience-item {
     &__header {
       display: flex;

@@ -48,7 +48,7 @@ const GlobalCSS = createGlobalStyle`
   }
 
   small {
-    color: ${({ theme }) => theme.colors.text200};
+    color: ${({ theme }) => theme.colors.text100};
     font-size: ${({ theme }) => theme.fonts.size.sm};
     line-height: 26px;
     margin-bottom: ${({ theme }) => theme.spacing(2)};

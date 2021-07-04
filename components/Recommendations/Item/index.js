@@ -19,10 +19,8 @@ const RecommendationsItem = ({
           <Image src={image} alt={`${name} picture`} width="100" height="100" />
         </div>
         <div className="recommendations__rating">
-          {[...Array(5)].map((item, idx) => (
-            <>
-              <Icon key={idx} name="star" width={16} />
-            </>
+          {Array.from({ length: 5 }, (item, k) => (
+            <Icon key={k} name="star" width={16} />
           ))}
         </div>
       </div>

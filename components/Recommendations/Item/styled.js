@@ -1,14 +1,10 @@
 import styled from 'styled-components'
+import Card from '../../Card'
 
-export const Component = styled.article`
+export const Component = styled(Card)`
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: ${({ theme }) => theme.spacing(2)};
-  margin-bottom: ${({ theme }) => theme.spacing(2.5)};
-  padding: ${({ theme }) => theme.spacing(3)};
-  background-color: ${({ theme }) => theme.palette.white};
-  border-radius: 8px;
-  box-shadow: ${({ theme }) => theme.shadows.card};
 
   .recommendations {
     &__picture {
