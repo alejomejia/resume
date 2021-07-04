@@ -6,6 +6,7 @@ import Box from '../Box'
 import Heading from '../Heading'
 import Flex from '../Flex'
 import Icon from '../Icon'
+import Boop from '../Boop'
 
 import { Link } from './styled'
 
@@ -38,7 +39,9 @@ const Social = ({}) => {
           onMouseEnter={handleOnEnter}
           onClick={handleOnClick}
         >
-          <Icon name="linkedin" width={32} />
+          <Boop config={{ y: -3 }}>
+            <Icon name="linkedin" width={32} />
+          </Boop>
         </Link>
         <Link
           href="https://github.com/alejomejia"
@@ -47,7 +50,9 @@ const Social = ({}) => {
           onMouseEnter={handleOnEnter}
           onClick={handleOnClick}
         >
-          <Icon name="github" width={32} />
+          <Boop config={{ y: -3 }}>
+            <Icon name="github" width={32} />
+          </Boop>
         </Link>
       </Flex>
     </Box>
