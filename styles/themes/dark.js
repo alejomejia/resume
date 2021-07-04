@@ -11,7 +11,7 @@ const dark = {
   },
   shadows: {
     card: '0 1px 3px hsla(0, 0%, 0%, 0.25)',
-    fixed: '0 2px 12px hsla(0, 0%, 0%, 0.25)'
+    fixed: '0 2px 12px hsla(0, 0%, 0%, 0.2)'
   }
 }
 

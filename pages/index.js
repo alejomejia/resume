@@ -1,6 +1,6 @@
+// Handle Theme switch
 import { useContext } from 'react'
 import { ThemeProvider } from 'styled-components'
-
 import { ThemeContext } from '../context/theme'
 
 import GlobalCSS from '../styles/global'
@@ -8,8 +8,10 @@ import GENERAL from '../styles/themes/general'
 import LIGHT from '../styles/themes/light'
 import DARK from '../styles/themes/dark'
 
+// Components
 import Head from '../components/Head'
 import Container from '../components/Container'
+import Float from '../components/Float'
 import Grid from '../components/Grid'
 
 import Intro from '../components/Intro'
@@ -33,6 +35,7 @@ const Home = () => {
         <GlobalCSS />
         <Head title="Resume :: Alejandro Mejia" />
         <Container>
+          <Float />
           <Grid gap="48px" columns="450px 1fr">
             <aside>
               <Intro />
