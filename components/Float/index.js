@@ -8,21 +8,28 @@ import Boop from '../Boop'
 import { Component } from './styled'
 
 const Float = () => {
-  const { isDarkMode, setIsDarkMode } = useContext(store)
+  const { isDarkMode, setIsDarkMode, isSoundEnable, setIsSoundEnable } =
+    useContext(store)
 
   const [switchOn] = useSound('/sounds/switch-on.mp3', {
     playbackRate: 0.75,
-    volume: 0.5
+    volume: 0.5,
+    soundEnabled: isSoundEnable
   })
 
   const [switchOff] = useSound('/sounds/switch-off.mp3', {
     playbackRate: 0.75,
-    volume: 0.5
+    volume: 0.5,
+    soundEnabled: isSoundEnable
   })
 
   const handleTheme = () => {
     setIsDarkMode(!isDarkMode)
     isDarkMode ? switchOn() : switchOff()
+  }
+
+  const handleSounds = () => {
+    setIsSoundEnable(!isSoundEnable)
   }
 
   return (
@@ -35,7 +42,10 @@ const Float = () => {
           <Icon name={isDarkMode ? 'moon' : 'sun'} width={24} />
         </Boop>
       </button>
-      <button className="float__switch float__switch--sound">
+      <button
+        className="float__switch float__switch--sound"
+        onClick={handleSounds}
+      >
         <Boop config={{ rotate: 8 }}>
           <Icon name="volume" width={24} />
         </Boop>
