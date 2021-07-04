@@ -11,25 +11,36 @@ const Float = () => {
   const { isDarkMode, setIsDarkMode, isSoundEnable, setIsSoundEnable } =
     useContext(store)
 
-  const [switchOn] = useSound('/sounds/switch-on.mp3', {
+  const [themeOn] = useSound('/sounds/theme-on.mp3', {
     playbackRate: 0.75,
     volume: 0.5,
     soundEnabled: isSoundEnable
   })
 
-  const [switchOff] = useSound('/sounds/switch-off.mp3', {
+  const [themeOff] = useSound('/sounds/theme-off.mp3', {
     playbackRate: 0.75,
     volume: 0.5,
     soundEnabled: isSoundEnable
+  })
+
+  const [soundOn] = useSound('/sounds/sound-on.mp3', {
+    playbackRate: 0.9,
+    volume: 0.5
+  })
+
+  const [soundOff] = useSound('/sounds/sound-off.mp3', {
+    playbackRate: 0.9,
+    volume: 0.5
   })
 
   const handleTheme = () => {
     setIsDarkMode(!isDarkMode)
-    isDarkMode ? switchOn() : switchOff()
+    isDarkMode ? themeOff() : themeOn()
   }
 
   const handleSounds = () => {
     setIsSoundEnable(!isSoundEnable)
+    isSoundEnable ? soundOff() : soundOn()
   }
 
   return (
