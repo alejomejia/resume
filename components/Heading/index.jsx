@@ -13,7 +13,8 @@ const Heading = ({
   icon,
   iconSize,
   mb,
-  children
+  children,
+  ...rest
 }) => {
   return (
     <Component
@@ -25,6 +26,7 @@ const Heading = ({
       color={color}
       mb={mb}
       isItalic={isItalic}
+      {...rest}
     >
       {icon && (
         <span className="heading__icon">

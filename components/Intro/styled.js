@@ -25,6 +25,14 @@ export const Component = styled.div`
       padding: ${({ theme }) => theme.spacing(6)};
       z-index: 10;
 
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        padding: ${({ theme }) => theme.spacing(4)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+        padding: ${({ theme }) => theme.spacing(3)};
+      }
+
       &__hello {
         font-size: 48px;
         margin-bottom: ${({ theme }) => theme.spacing(2)};
@@ -34,6 +42,21 @@ export const Component = styled.div`
         font-size: ${({ theme }) => theme.fonts.size.xxl};
         font-weight: ${({ theme }) => theme.fonts.weight.light};
         line-height: 1;
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+          font-size: ${({ theme }) => theme.fonts.size.xl};
+          line-height: 1.2;
+        }
+      }
+
+      &__name {
+        color: ${({ theme }) => theme.palette.white};
+        font-size: ${({ theme }) => theme.fonts.size.xxxl};
+        margin-bottom: ${({ theme }) => theme.spacing(2)};
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+          font-size: ${({ theme }) => theme.fonts.size.xxl};
+        }
       }
 
       &__location {
@@ -46,6 +69,10 @@ export const Component = styled.div`
         display: flex;
         align-items: center;
         margin-top: ${({ theme }) => theme.spacing(7)};
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+          font-size: ${({ theme }) => theme.fonts.size.sm};
+        }
       }
 
       &__icon {

@@ -18,13 +18,7 @@ const Intro = () => {
       <div className="content">
         <span className="content__hello">👋🏻</span>
         <span className="content__preffix">My name is</span>
-        <Heading
-          color={theme.palette.white}
-          size={theme.fonts.size.xxxl}
-          mb={theme.spacing(2)}
-        >
-          Alejandro Mejia
-        </Heading>
+        <h1 className="content__name">Alejandro Mejia</h1>
         <Heading
           as="h2"
           color={theme.palette.white}
