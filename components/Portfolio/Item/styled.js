@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Component = styled.article`
   position: relative;
+  display: flex;
   min-height: 260px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
@@ -9,6 +10,8 @@ export const Component = styled.article`
   background-position: center;
   border-radius: 8px;
   overflow: hidden;
+  // Safari fix for rounded borders
+  transform: translateZ(0);
 
   &.portfolio-item {
     & > div:first-child {
@@ -26,6 +29,7 @@ export const Component = styled.article`
   .portfolio-item {
     &__container {
       display: flex;
+      flex: 1;
       align-items: flex-end;
       justify-content: space-between;
       min-height: 100%;
@@ -104,6 +108,10 @@ export const Component = styled.article`
       z-index: 1;
       backdrop-filter: blur(4px);
       transition: backdrop-filter 0.35s ease;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+        backdrop-filter: blur(0);
+      }
     }
   }
 `

@@ -24,6 +24,8 @@ export const Component = styled.div`
     color: ${({ theme }) => theme.palette.white};
     background-color: hsl(245 69% 23%);
     border-radius: ${({ theme }) => theme.spacing(1)};
+    // Safari fix for rounded borders
+    transform: translateZ(0);
 
     @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
       border-radius: 0;
@@ -106,8 +108,6 @@ export const Component = styled.div`
       }
 
       &__icon {
-        display: flex;
-        align-items: center;
       }
 
       &__email {
