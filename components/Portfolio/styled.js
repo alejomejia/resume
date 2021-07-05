@@ -24,7 +24,7 @@ export const Component = styled.section`
       gap: 24px;
       grid-template-columns: calc(50% - 12px) calc(50% - 12px);
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
         grid-template-columns: 100%;
       }
     }
