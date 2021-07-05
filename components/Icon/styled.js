@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Component = styled.span`
-  display: inline-flex;
+  display: grid;
 
   svg {
     fill: ${(props) => (props.fill ? props.fill : props.theme.colors.text100)};
