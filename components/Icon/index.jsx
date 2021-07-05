@@ -10,7 +10,6 @@ import IconFire from './icons/fire'
 import IconGithub from './icons/github'
 import IconGlobe from './icons/globe'
 import IconLinkedIn from './icons/linkedin'
-import IconMailOpen from './icons/mail-open'
 import IconMail from './icons/mail'
 import IconMoon from './icons/moon'
 import IconPencil from './icons/pencil'
@@ -33,7 +32,6 @@ export const SVG = {
   github: IconGithub,
   globe: IconGlobe,
   linkedin: IconLinkedIn,
-  mailOpen: IconMailOpen,
   mail: IconMail,
   moon: IconMoon,
   pencil: IconPencil,
