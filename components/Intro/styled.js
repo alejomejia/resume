@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
 export const Component = styled.div`
+  margin-top: ${({ theme }) => theme.spacing(5)};
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin-top: ${({ theme }) => theme.spacing(3)};
+  }
+
   &.intro {
     overflow: hidden;
     position: relative;

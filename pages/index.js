@@ -12,7 +12,7 @@ import DARK from '../styles/themes/dark'
 import Head from '../components/Head'
 import Container from '../components/Container'
 import Float from '../components/Float'
-import Grid from '../components/Grid'
+import PageGrid from '../components/PageGrid'
 
 import Intro from '../components/Intro'
 import Skills from '../components/Skills'
@@ -36,7 +36,7 @@ const Home = () => {
         <Head title="Resume :: Alejandro Mejia" />
         <Container>
           <Float />
-          <Grid gap="48px" columns="450px 1fr">
+          <PageGrid>
             <aside>
               <Intro />
               <Skills />
@@ -49,7 +49,7 @@ const Home = () => {
               <Portfolio />
               <Recommendations />
             </main>
-          </Grid>
+          </PageGrid>
         </Container>
         <Footer />
       </ThemeProvider>

@@ -26,7 +26,8 @@ const general = {
     }
   },
   breakpoints: {
-    l: '1440px',
+    xl: '1440px',
+    l: '1200px',
     m: '1024px',
     s: '768px',
     xs: '550px',
