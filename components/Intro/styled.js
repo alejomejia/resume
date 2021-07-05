@@ -13,6 +13,10 @@ export const Component = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing(4)};
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+    margin-bottom: ${({ theme }) => theme.spacing(3)};
+  }
+
   &.intro {
     overflow: hidden;
     position: relative;
@@ -46,6 +50,10 @@ export const Component = styled.div`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
         padding: ${({ theme }) => theme.spacing(4)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        padding: ${({ theme }) => theme.spacing(3)};
       }
 
       &__hello {

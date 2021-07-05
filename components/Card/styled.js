@@ -6,4 +6,8 @@ export const Component = styled.article`
   background-color: ${({ theme }) => theme.colors.surface};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.card};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+    padding: ${({ theme }) => theme.spacing(2.5)};
+  }
 `

@@ -7,8 +7,16 @@ export const Component = styled(Card)`
       display: flex;
       margin-bottom: ${({ theme }) => theme.spacing(2)};
 
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: column;
+      }
+
       &-left {
         margin-right: ${({ theme }) => theme.spacing(1.5)};
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+          margin-bottom: ${({ theme }) => theme.spacing(1)};
+        }
       }
 
       &-right-bottom {

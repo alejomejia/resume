@@ -31,6 +31,15 @@ export const Component = styled.section`
         margin-bottom: 0;
       }
 
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        padding: ${({ theme }) => theme.spacing(3)}
+          ${({ theme }) => theme.spacing(2)};
+
+        h3.heading .heading__title {
+          font-size: ${({ theme }) => theme.fonts.size.l};
+        }
+      }
+
       button {
         @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
           display: none;

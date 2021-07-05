@@ -30,12 +30,21 @@ export const Component = styled.article`
       justify-content: space-between;
       min-height: 100%;
       padding: ${({ theme }) => theme.spacing(3)};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: column-reverse;
+        padding: ${({ theme }) => theme.spacing(2)};
+      }
     }
 
     &__buttons {
       display: flex;
       flex-direction: column;
       gap: 8px;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: row;
+      }
     }
   }
 
@@ -43,6 +52,11 @@ export const Component = styled.article`
     &__content {
       padding-right: ${({ theme }) => theme.spacing(2)};
       color: ${({ theme }) => theme.palette.white};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        padding-top: ${({ theme }) => theme.spacing(2)};
+        padding-right: 0;
+      }
     }
 
     &__title {

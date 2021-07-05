@@ -17,6 +17,13 @@ export const Component = styled.footer`
         padding-left: ${({ theme }) => theme.spacing(4)};
         padding-right: ${({ theme }) => theme.spacing(4)};
       }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        margin-top: ${({ theme }) => theme.spacing(6)};
+        margin-bottom: ${({ theme }) => theme.spacing(6)};
+        padding-left: ${({ theme }) => theme.spacing(2)};
+        padding-right: ${({ theme }) => theme.spacing(2)};
+      }
     }
 
     &__text {
@@ -25,6 +32,10 @@ export const Component = styled.footer`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
         font-size: ${({ theme }) => theme.fonts.size.l};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+        font-size: ${({ theme }) => theme.fonts.size.m};
       }
     }
 
@@ -46,6 +57,11 @@ export const Component = styled.footer`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
         font-size: ${({ theme }) => theme.fonts.size.sm};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        padding-top: ${({ theme }) => theme.spacing(3)};
+        padding-bottom: ${({ theme }) => theme.spacing(8)};
       }
     }
   }
