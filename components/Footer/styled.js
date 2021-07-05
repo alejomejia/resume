@@ -59,8 +59,12 @@ export const Component = styled.footer`
         font-size: ${({ theme }) => theme.fonts.size.sm};
       }
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
         padding-top: ${({ theme }) => theme.spacing(3)};
+        padding-bottom: ${({ theme }) => theme.spacing(12)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
         padding-bottom: ${({ theme }) => theme.spacing(8)};
       }
     }

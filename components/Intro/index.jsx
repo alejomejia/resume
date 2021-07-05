@@ -1,5 +1,6 @@
 import Icon from 'components/Icon'
 
+import Hello from './Hello'
 import Purple from './svg/Purple'
 import Cyan from './svg/Cyan'
 
@@ -9,7 +10,9 @@ const Intro = () => {
   return (
     <Component className="intro">
       <div className="content">
-        <span className="content__hello">👋🏻</span>
+        <span className="content__hello">
+          <Hello />
+        </span>
         <span className="content__preffix">My name is</span>
         <h1 className="content__name">Alejandro Mejia</h1>
         <h2 className="content__job-title">Product Developer</h2>
