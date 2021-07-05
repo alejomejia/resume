@@ -2,9 +2,10 @@ import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
-import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Item from './Item'
+
+import { Component } from './styled'
 
 const Recommendations = ({}) => {
   const theme = useContext(ThemeContext)
@@ -25,7 +26,7 @@ const Recommendations = ({}) => {
   }, [])
 
   return (
-    <Box as="section" mb={theme.spacing(6)}>
+    <Component className="recommendations">
       <Heading as="h3" icon="bolt" mb={theme.spacing(3)}>
         Recommendations
       </Heading>
@@ -41,8 +42,8 @@ const Recommendations = ({}) => {
         />
       ))}
       <small>
-        These are real <strong>recommendations</strong>. You can take a look on
-        my{' '}
+        These are <strong>real recommendations</strong>. You can take a look at
+        them on my{' '}
         <a
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"
@@ -52,7 +53,7 @@ const Recommendations = ({}) => {
         </a>
         .
       </small>
-    </Box>
+    </Component>
   )
 }
 

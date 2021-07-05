@@ -1,16 +1,17 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Flex from 'components/Flex'
 import Tag from 'components/Tag'
+
+import { Component } from './styled'
 
 const Languages = ({}) => {
   const theme = useContext(ThemeContext)
 
   return (
-    <Box mb={theme.spacing(6)}>
+    <Component className="languages">
       <Heading as="h3" icon="chat" mb={theme.spacing(1.5)}>
         Languages
       </Heading>
@@ -18,7 +19,7 @@ const Languages = ({}) => {
         <Tag>English - Advanced</Tag>
         <Tag>Spanish - Native</Tag>
       </Flex>
-    </Box>
+    </Component>
   )
 }
 

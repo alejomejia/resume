@@ -10,6 +10,13 @@ export const Component = styled.footer`
       margin-bottom: ${({ theme }) => theme.spacing(12.5)};
       justify-content: center;
       font-family: ${({ theme }) => theme.fonts.family.primary};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+        margin-top: ${({ theme }) => theme.spacing(8)};
+        margin-bottom: ${({ theme }) => theme.spacing(8)};
+        padding-left: ${({ theme }) => theme.spacing(4)};
+        padding-right: ${({ theme }) => theme.spacing(4)};
+      }
     }
 
     &__text {
@@ -32,6 +39,10 @@ export const Component = styled.footer`
       color: ${({ theme }) => theme.colors.text200};
       font-family: ${({ theme }) => theme.fonts.family.primary};
       background-color: ${({ theme }) => theme.colors.bgAccent};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+        font-size: ${({ theme }) => theme.fonts.size.sm};
+      }
     }
   }
 `

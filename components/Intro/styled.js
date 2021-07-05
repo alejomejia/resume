@@ -8,6 +8,11 @@ export const Component = styled.div`
     margin-top: ${({ theme }) => theme.spacing(3)};
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin-top: 0;
+    margin-bottom: ${({ theme }) => theme.spacing(4)};
+  }
+
   &.intro {
     overflow: hidden;
     position: relative;
@@ -15,6 +20,12 @@ export const Component = styled.div`
     color: ${({ theme }) => theme.palette.white};
     background-color: hsl(245 69% 23%);
     border-radius: ${({ theme }) => theme.spacing(1)};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+      border-radius: 0;
+      min-height: 355px;
+      text-align: center;
+    }
 
     .content {
       position: absolute;
@@ -31,6 +42,10 @@ export const Component = styled.div`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
         padding: ${({ theme }) => theme.spacing(3)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+        padding: ${({ theme }) => theme.spacing(4)};
       }
 
       &__hello {
@@ -59,6 +74,7 @@ export const Component = styled.div`
         }
       }
 
+      &__job-title,
       &__location {
         font-size: ${({ theme }) => theme.fonts.size.l};
         font-family: ${({ theme }) => theme.fonts.family.secondary};
@@ -72,6 +88,12 @@ export const Component = styled.div`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
           font-size: ${({ theme }) => theme.fonts.size.sm};
+        }
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+          font-size: ${({ theme }) => theme.fonts.size.default};
+          margin-top: ${({ theme }) => theme.spacing(5)};
+          justify-content: center;
         }
       }
 

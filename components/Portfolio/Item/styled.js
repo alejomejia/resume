@@ -51,6 +51,12 @@ export const Component = styled.article`
 
     &__stack {
       font-size: ${({ theme }) => theme.fonts.size.sm};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+        display: inline-block;
+        line-height: 1.4;
+        margin-top: ${({ theme }) => theme.spacing(1)};
+      }
     }
 
     &__button {

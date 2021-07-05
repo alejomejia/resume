@@ -6,6 +6,8 @@ import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Item from './Item'
 
+import { Component } from './styled'
+
 const Experience = ({}) => {
   const theme = useContext(ThemeContext)
 
@@ -25,7 +27,7 @@ const Experience = ({}) => {
   }, [])
 
   return (
-    <Box as="section" mb={theme.spacing(6)}>
+    <Component className="experience">
       <Heading as="h3" icon="briefcase" mb={theme.spacing(3)}>
         Relevant Experience
       </Heading>
@@ -41,7 +43,7 @@ const Experience = ({}) => {
           description={item.description}
         />
       ))}
-    </Box>
+    </Component>
   )
 }
 

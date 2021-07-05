@@ -7,6 +7,8 @@ import Heading from 'components/Heading'
 import Flex from 'components/Flex'
 import Tag from 'components/Tag'
 
+import { Component } from './styled'
+
 const Skills = ({}) => {
   const theme = useContext(ThemeContext)
 
@@ -28,7 +30,7 @@ const Skills = ({}) => {
   }, [])
 
   return (
-    <Box mb={theme.spacing(6)}>
+    <Component className="skills">
       <Heading as="h3" icon="badge" mb={theme.spacing(1.5)}>
         Skills
       </Heading>
@@ -66,7 +68,7 @@ const Skills = ({}) => {
           ))}
         </Flex>
       </Box>
-    </Box>
+    </Component>
   )
 }
 

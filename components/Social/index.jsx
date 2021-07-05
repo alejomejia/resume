@@ -4,13 +4,12 @@ import useSound from 'use-sound'
 
 import { store } from 'context/store'
 
-import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Flex from 'components/Flex'
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
 
-import { Link } from './styled'
+import { Component, Link } from './styled'
 
 const Social = ({}) => {
   const theme = useContext(ThemeContext)
@@ -32,7 +31,7 @@ const Social = ({}) => {
   const handleOnClick = () => popClick()
 
   return (
-    <Box mb={theme.spacing(6)}>
+    <Component className="social">
       <Heading as="h3" icon="speaker" mb={theme.spacing(1.5)}>
         Social
       </Heading>
@@ -60,7 +59,7 @@ const Social = ({}) => {
           </Boop>
         </Link>
       </Flex>
-    </Box>
+    </Component>
   )
 }
 

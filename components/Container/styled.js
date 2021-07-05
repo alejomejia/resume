@@ -11,4 +11,8 @@ export const Container = styled.div`
     padding-left: ${({ theme }) => theme.spacing(3)};
     padding-right: ${({ theme }) => theme.spacing(3)};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 0;
+  }
 `

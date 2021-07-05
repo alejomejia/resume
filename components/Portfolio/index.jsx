@@ -2,10 +2,11 @@ import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
-import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Grid from 'components/Grid'
 import Item from './Item'
+
+import { Component } from './styled'
 
 const Portfolio = ({}) => {
   const theme = useContext(ThemeContext)
@@ -26,7 +27,7 @@ const Portfolio = ({}) => {
   }, [])
 
   return (
-    <Box as="section" mb={theme.spacing(6)}>
+    <Component className="portfolio">
       <Heading as="h3" icon="fire" mb={theme.spacing(3)}>
         Portfolio
       </Heading>
@@ -41,7 +42,7 @@ const Portfolio = ({}) => {
           />
         ))}
       </Grid>
-    </Box>
+    </Component>
   )
 }
 
