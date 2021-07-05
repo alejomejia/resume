@@ -22,6 +22,10 @@ export const Component = styled.footer`
     &__text {
       color: ${({ theme }) => theme.colors.text200};
       font-size: ${({ theme }) => theme.fonts.size.xl};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+        font-size: ${({ theme }) => theme.fonts.size.l};
+      }
     }
 
     &__link {
@@ -36,7 +40,7 @@ export const Component = styled.footer`
       padding-left: ${({ theme }) => theme.spacing(3)};
       padding-right: ${({ theme }) => theme.spacing(3)};
       min-height: 60px;
-      color: ${({ theme }) => theme.colors.text200};
+      color: ${({ theme }) => theme.colors.text100};
       font-family: ${({ theme }) => theme.fonts.family.primary};
       background-color: ${({ theme }) => theme.colors.bgAccent};
 

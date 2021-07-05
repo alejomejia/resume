@@ -15,6 +15,12 @@ export const Component = styled.div`
   border-radius: 80px;
   box-shadow: ${({ theme }) => theme.shadows.fixed};
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    top: initial;
+    bottom: ${({ theme }) => theme.spacing(3)};
+    right: ${({ theme }) => theme.spacing(3)};
+  }
+
   .float {
     &__switch {
       cursor: pointer;

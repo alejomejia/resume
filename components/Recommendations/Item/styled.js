@@ -6,7 +6,22 @@ export const Component = styled(Card)`
   grid-template-columns: 100px 1fr;
   gap: ${({ theme }) => theme.spacing(2)};
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+
   .recommendations {
+    &-item {
+      &__left {
+        @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
     &__picture {
       display: flex;
       margin-bottom: ${({ theme }) => theme.spacing(1)};
@@ -20,6 +35,10 @@ export const Component = styled(Card)`
 
     &__heading {
       font-weight: ${({ theme }) => theme.fonts.weight.regular};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+        text-align: center;
+      }
     }
 
     &__name {
@@ -39,6 +58,12 @@ export const Component = styled(Card)`
       font-family: ${({ theme }) => theme.fonts.family.primary};
       font-style: italic;
       margin-bottom: ${({ theme }) => theme.spacing(2)};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+        display: flex;
+        justify-content: center;
+        margin-top: 4px;
+      }
     }
 
     &__description {

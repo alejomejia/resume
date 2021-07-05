@@ -3,7 +3,6 @@ import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
 import Heading from 'components/Heading'
-import Grid from 'components/Grid'
 import Item from './Item'
 
 import { Component } from './styled'
@@ -31,7 +30,7 @@ const Portfolio = ({}) => {
       <Heading as="h3" icon="fire" mb={theme.spacing(3)}>
         Portfolio
       </Heading>
-      <Grid gap="24px" columns="calc(50% - 12px) calc(50% - 12px)">
+      <div className="portfolio__grid">
         {portfolio.map((item) => (
           <Item
             key={item.id}
@@ -41,7 +40,7 @@ const Portfolio = ({}) => {
             external={item.external}
           />
         ))}
-      </Grid>
+      </div>
     </Component>
   )
 }
