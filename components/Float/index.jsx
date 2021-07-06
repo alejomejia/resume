@@ -14,6 +14,12 @@ const Float = () => {
 
   const [browserTheme, setBrowserTheme] = useState('')
 
+  const [popEnter] = useSound('/sounds/pop.mp3', {
+    playbackRate: 0.9,
+    volume: 0.5,
+    soundEnabled: isSoundEnable
+  })
+
   const [themeOn] = useSound('/sounds/theme-on.mp3', {
     playbackRate: 0.75,
     volume: 0.5,
@@ -52,11 +58,16 @@ const Float = () => {
     isDarkMode ? themeOff() : themeOn()
   }
 
+  const handleMouseEnter = () => {
+    popEnter()
+  }
+
   return (
     <Component className="float">
       <button
         className="float__switch float__switch--theme"
         onClick={handleTheme}
+        onMouseEnter={handleMouseEnter}
       >
         <Boop config={{ rotate: 48 }}>
           <Icon name={browserTheme === 'dark' ? 'moon' : 'sun'} width={24} />
@@ -65,6 +76,7 @@ const Float = () => {
       <button
         className="float__switch float__switch--sound"
         onClick={handleSounds}
+        onMouseEnter={handleMouseEnter}
       >
         <Boop config={{ rotate: 8 }}>
           <Icon name="volume" width={24} />
