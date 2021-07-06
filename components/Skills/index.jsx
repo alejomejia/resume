@@ -16,8 +16,6 @@ const Skills = ({}) => {
   const hardSkills = response && response[0].skills
   const softSkills = response && response[1].skills
 
-  console.log(hardSkills)
-
   return (
     <Component className="skills">
       <Heading as="h3" icon="badge" mb={theme.spacing(1.5)}>
