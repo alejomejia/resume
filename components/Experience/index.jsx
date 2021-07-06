@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import useAxios from 'hooks/use-axios'
 
@@ -11,7 +11,7 @@ const Experience = ({}) => {
   const theme = useContext(ThemeContext)
   const { response } = useAxios('/experience')
 
-  const experience = response && response
+  const experience = response
 
   return (
     <Component className="experience">
