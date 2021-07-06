@@ -33,7 +33,7 @@ Flex.propTypes = {
     'row-reverse'
   ]),
   wrap: PropTypes.oneOf(['wrap', 'nowrap', 'wrap-reverse']),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 }
 
 export default Flex
