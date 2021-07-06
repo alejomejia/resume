@@ -92,18 +92,21 @@ export const Component = styled.div`
       }
 
       &__contact {
-        display: flex;
-        align-items: center;
-        margin-top: ${({ theme }) => theme.spacing(7)};
+        &-link {
+          display: flex;
+          align-items: center;
+          color: var(--color-white);
+          margin-top: ${({ theme }) => theme.spacing(7)};
 
-        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-          font-size: ${({ theme }) => theme.fonts.size.sm};
-        }
+          @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+            font-size: ${({ theme }) => theme.fonts.size.sm};
+          }
 
-        @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-          font-size: ${({ theme }) => theme.fonts.size.default};
-          margin-top: ${({ theme }) => theme.spacing(5)};
-          justify-content: center;
+          @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+            font-size: ${({ theme }) => theme.fonts.size.default};
+            margin-top: ${({ theme }) => theme.spacing(5)};
+            justify-content: center;
+          }
         }
       }
 
@@ -113,10 +116,6 @@ export const Component = styled.div`
       &__email {
         display: inline-block;
         margin-left: ${({ theme }) => theme.spacing(1)};
-
-        a {
-          color: var(--color-white);
-        }
       }
     }
 

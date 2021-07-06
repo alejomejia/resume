@@ -18,14 +18,17 @@ const Intro = () => {
         <h2 className="content__job-title">Product Developer</h2>
         <span className="content__location">From Medellin, CO 🇨🇴</span>
         <div className="content__contact">
-          <span className="content__icon">
-            <Icon name="mail" fill="#fff" />
-          </span>
-          <span className="content__email">
-            <a href="mailto:alejomejiacuartas@outlook.com">
+          <a
+            className="content__contact-link"
+            href="mailto:alejomejiacuartas@outlook.com"
+          >
+            <span className="content__icon">
+              <Icon name="mail" fill="#fff" />
+            </span>
+            <span className="content__email">
               alejomejiacuartas@outlook.com
-            </a>
-          </span>
+            </span>
+          </a>
         </div>
       </div>
       <div className="art">
