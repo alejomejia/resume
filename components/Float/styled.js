@@ -11,9 +11,9 @@ export const Component = styled.div`
   gap: 24px;
   min-width: 120px;
   min-height: 48px;
-  background-color: ${({ theme }) => theme.colors.surface};
+  background-color: var(--color-surface);
   border-radius: 80px;
-  box-shadow: ${({ theme }) => theme.shadows.fixed};
+  box-shadow: var(--shadow-fixed);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     top: initial;

@@ -20,7 +20,7 @@ export const Component = styled(Card)`
       }
 
       &-right-bottom {
-        color: ${({ theme }) => theme.colors.text100};
+        color: var(--color-text-100);
       }
     }
   }
@@ -32,12 +32,12 @@ export const Component = styled(Card)`
 
     &__title {
       display: inline-block;
-      color: ${({ theme }) => theme.colors.text200};
+      color: var(--color-text-200);
       margin-right: ${({ theme }) => theme.spacing(0.5)};
     }
 
     &__at {
-      color: ${({ theme }) => theme.palette.primary};
+      color: var(--color-primary);
     }
 
     &__start-date,

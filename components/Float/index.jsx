@@ -1,5 +1,6 @@
-import { useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { store } from 'context/store'
+import { useTheme } from 'next-themes'
 import useSound from 'use-sound'
 
 import Icon from 'components/Icon'
@@ -8,8 +9,10 @@ import Boop from 'components/Boop'
 import { Component } from './styled'
 
 const Float = () => {
-  const { isDarkMode, setIsDarkMode, isSoundEnable, setIsSoundEnable } =
-    useContext(store)
+  const { theme, systemTheme, setTheme } = useTheme()
+  const { isSoundEnable, setIsSoundEnable } = useContext(store)
+
+  const [browserTheme, setBrowserTheme] = useState('')
 
   const [themeOn] = useSound('/sounds/theme-on.mp3', {
     playbackRate: 0.75,
@@ -33,14 +36,20 @@ const Float = () => {
     volume: 0.5
   })
 
-  const handleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-    isDarkMode ? themeOff() : themeOn()
-  }
-
   const handleSounds = () => {
     setIsSoundEnable(!isSoundEnable)
     isSoundEnable ? soundOff() : soundOn()
+  }
+
+  useEffect(() => {
+    const browserTheme = document.documentElement.getAttribute('data-theme')
+    setBrowserTheme(browserTheme)
+  }, [systemTheme, theme])
+
+  const handleTheme = () => {
+    const isDarkMode = browserTheme === 'dark'
+    setTheme(isDarkMode ? 'light' : 'dark')
+    isDarkMode ? themeOff() : themeOn()
   }
 
   return (
@@ -50,7 +59,7 @@ const Float = () => {
         onClick={handleTheme}
       >
         <Boop config={{ rotate: 48 }}>
-          <Icon name={isDarkMode ? 'moon' : 'sun'} width={24} />
+          <Icon name={browserTheme === 'dark' ? 'moon' : 'sun'} width={24} />
         </Boop>
       </button>
       <button

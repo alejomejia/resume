@@ -43,17 +43,17 @@ export const Component = styled(Card)`
 
     &__name {
       display: inline-block;
-      color: ${({ theme }) => theme.colors.text200};
+      color: var(--color-text-200);
       margin-right: ${({ theme }) => theme.spacing(0.5)};
     }
 
     &__company {
-      color: ${({ theme }) => theme.palette.primary};
+      color: var(--color-primary);
     }
 
     &__title {
       display: inline-block;
-      color: ${({ theme }) => theme.colors.text100};
+      color: var(--color-text-100);
       font-size: ${({ theme }) => theme.fonts.size.sm};
       font-family: ${({ theme }) => theme.fonts.family.primary};
       font-style: italic;

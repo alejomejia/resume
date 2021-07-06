@@ -13,7 +13,7 @@ export const Component = styled.h1`
 
     &__title {
       color: ${(props) =>
-        props.color ? props.color : props.theme.colors.text300};
+        props.color ? props.color : 'var(--color-text-300)'};
       font-size: ${(props) =>
         props.size ? props.size : props.theme.fonts.size.xl};
       font-family: ${({ theme, family }) => theme.fonts.family[family]};

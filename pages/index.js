@@ -5,8 +5,6 @@ import { store } from '../context/store'
 
 import GlobalCSS from '../styles/global'
 import GENERAL from '../styles/themes/general'
-import LIGHT from '../styles/themes/light'
-import DARK from '../styles/themes/dark'
 
 // Components
 import Head from '../components/Head'
@@ -27,32 +25,28 @@ import Recommendations from '../components/Recommendations'
 import Footer from '../components/Footer'
 
 const Home = () => {
-  const { isDarkMode } = useContext(store)
-
   return (
     <ThemeProvider theme={GENERAL}>
-      <ThemeProvider theme={isDarkMode ? DARK : LIGHT}>
-        <GlobalCSS />
-        <Head title="Resume :: Alejandro Mejia" />
-        <Container>
-          <Float />
-          <PageGrid>
-            <aside>
-              <Intro />
-              <Skills />
-              <Languages />
-              <Social />
-            </aside>
-            <main>
-              <About />
-              <Experience />
-              <Portfolio />
-              <Recommendations />
-            </main>
-          </PageGrid>
-        </Container>
-        <Footer />
-      </ThemeProvider>
+      <GlobalCSS />
+      <Head title="Resume :: Alejandro Mejia" />
+      <Container>
+        <Float />
+        <PageGrid>
+          <aside>
+            <Intro />
+            <Skills />
+            <Languages />
+            <Social />
+          </aside>
+          <main>
+            <About />
+            <Experience />
+            <Portfolio />
+            <Recommendations />
+          </main>
+        </PageGrid>
+      </Container>
+      <Footer />
     </ThemeProvider>
   )
 }

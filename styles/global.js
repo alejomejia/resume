@@ -1,17 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalCSS = createGlobalStyle`
-  *{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
+import reset from './reset'
+import lightTheme from './themes/light'
+import darkTheme from './themes/dark'
 
-    &:before,
-    &:after{
-      box-sizing: border-box;
-    }
-  }
+const GlobalCSS = createGlobalStyle`
+  ${reset}
+
+  ${lightTheme}
+  ${darkTheme}
 
   html,
   body{
@@ -22,7 +19,7 @@ const GlobalCSS = createGlobalStyle`
     position: relative;
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: 16px;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: var(--color-bg);
   }
 
   h1,
@@ -33,12 +30,12 @@ const GlobalCSS = createGlobalStyle`
   }
 
   p {
-    color: ${({ theme }) => theme.colors.text200};
+    color: var(--color-text-200);
     line-height: 26px;
     margin-bottom: ${({ theme }) => theme.spacing(2)};
 
     strong {
-      color: ${({ theme }) => theme.colors.text300};
+      color: var(--color-text-300);
       font-weight: ${({ theme }) => theme.fonts.weight.medium};
     }
 
@@ -48,13 +45,13 @@ const GlobalCSS = createGlobalStyle`
   }
 
   small {
-    color: ${({ theme }) => theme.colors.text100};
+    color: var(--color-text-100);
     font-size: ${({ theme }) => theme.fonts.size.sm};
     line-height: 26px;
     margin-bottom: ${({ theme }) => theme.spacing(2)};
 
     a {
-      color: ${({ theme }) => theme.palette.primary};
+      color: var(--color-primary);
       font-family: ${({ theme }) => theme.fonts.family.primary};
     }
   }

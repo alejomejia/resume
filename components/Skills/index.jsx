@@ -36,7 +36,7 @@ const Skills = ({}) => {
       </Heading>
       <Heading
         as="h4"
-        color={theme.colors.text200}
+        // color={theme.colors.text200}
         size={theme.fonts.size.l}
         weight={theme.fonts.weight.regular}
         mb={theme.spacing(1)}
@@ -53,7 +53,7 @@ const Skills = ({}) => {
       </Box>
       <Heading
         as="h4"
-        color={theme.colors.text200}
+        // color={theme.colors.text200}
         size={theme.fonts.size.l}
         weight={theme.fonts.weight.regular}
         mb={theme.spacing(1)}

@@ -1,8 +1,4 @@
 const general = {
-  palette: {
-    white: 'hsl(0, 0%, 100%)',
-    primary: 'hsl(195, 100%, 50%)'
-  },
   fonts: {
     size: {
       xxxl: '2.25rem', // 36px

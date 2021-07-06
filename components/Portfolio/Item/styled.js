@@ -55,7 +55,7 @@ export const Component = styled.article`
   .portfolio {
     &__content {
       padding-right: ${({ theme }) => theme.spacing(2)};
-      color: ${({ theme }) => theme.palette.white};
+      color: var(--color-white);
 
       @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
         padding-top: ${({ theme }) => theme.spacing(2)};
@@ -84,7 +84,7 @@ export const Component = styled.article`
       width: 40px;
       height: 40px;
       opacity: 0.6;
-      background-color: ${({ theme }) => theme.palette.white};
+      background-color: var(--color-white);
       border-radius: 8px;
       transition: opacity 0.35s ease;
 

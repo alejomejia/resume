@@ -27,7 +27,7 @@ export const Component = styled.footer`
     }
 
     &__text {
-      color: ${({ theme }) => theme.colors.text200};
+      color: var(--color-text-200);
       font-size: ${({ theme }) => theme.fonts.size.xl};
 
       @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
@@ -40,7 +40,7 @@ export const Component = styled.footer`
     }
 
     &__link {
-      color: ${({ theme }) => theme.palette.primary};
+      color: var(--color-primary);
       font-weight: ${({ theme }) => theme.fonts.weight.bold};
     }
 
@@ -51,9 +51,9 @@ export const Component = styled.footer`
       padding-left: ${({ theme }) => theme.spacing(3)};
       padding-right: ${({ theme }) => theme.spacing(3)};
       min-height: 60px;
-      color: ${({ theme }) => theme.colors.text100};
+      color: var(--color-text-100);
       font-family: ${({ theme }) => theme.fonts.family.primary};
-      background-color: ${({ theme }) => theme.colors.bgAccent};
+      background-color: var(--color-bg-accent);
 
       @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
         font-size: ${({ theme }) => theme.fonts.size.sm};

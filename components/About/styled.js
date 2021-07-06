@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Component = styled.section`
   position: relative;
   margin-bottom: ${({ theme }) => theme.spacing(5)};
-  background-color: ${({ theme }) => theme.colors.bgAccent};
+  background-color: var(--color-bg-accent);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     margin-bottom: 0;
@@ -16,7 +16,7 @@ export const Component = styled.section`
     left: -500%;
     bottom: 0;
     width: 1000%;
-    background-color: ${({ theme }) => theme.colors.bgAccent};
+    background-color: var(--color-bg-accent);
     z-index: -1;
   }
 

@@ -21,7 +21,7 @@ export const Component = styled.div`
     overflow: hidden;
     position: relative;
     min-height: 480px;
-    color: ${({ theme }) => theme.palette.white};
+    color: var(--color-white);
     background-color: hsl(245 69% 23%);
     border-radius: ${({ theme }) => theme.spacing(1)};
     // Safari fix for rounded borders
@@ -75,7 +75,7 @@ export const Component = styled.div`
       }
 
       &__name {
-        color: ${({ theme }) => theme.palette.white};
+        color: var(--color-white);
         font-size: ${({ theme }) => theme.fonts.size.xxxl};
         margin-bottom: ${({ theme }) => theme.spacing(2)};
 
@@ -115,7 +115,7 @@ export const Component = styled.div`
         margin-left: ${({ theme }) => theme.spacing(1)};
 
         a {
-          color: ${({ theme }) => theme.palette.white};
+          color: var(--color-white);
         }
       }
     }
