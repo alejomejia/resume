@@ -16,12 +16,12 @@ const Social = ({}) => {
   const { isSoundEnable } = useContext(store)
 
   const [popEnter] = useSound('/sounds/pop.mp3', {
+    playbackRate: 0.9,
     volume: 0.5,
     soundEnabled: isSoundEnable
   })
 
   const [popClick] = useSound('/sounds/pop.mp3', {
-    playbackRate: 0.9,
     volume: 0.5,
     soundEnabled: isSoundEnable
   })

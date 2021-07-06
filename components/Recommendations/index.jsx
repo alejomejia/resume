@@ -42,8 +42,8 @@ const Recommendations = ({}) => {
         />
       ))}
       <small>
-        These are <strong>real recommendations</strong>. You can take a look at
-        them on my{' '}
+        If you want to check these and more recommendations of my work, please
+        take a look to my{' '}
         <a
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"

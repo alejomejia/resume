@@ -69,12 +69,12 @@ export const Component = styled.article`
     }
 
     &__stack {
+      display: inline-block;
       font-size: ${({ theme }) => theme.fonts.size.sm};
+      line-height: 1.4;
+      margin-top: ${({ theme }) => theme.spacing(1)};
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-        display: inline-block;
-        line-height: 1.4;
-        margin-top: ${({ theme }) => theme.spacing(1)};
+      @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
       }
     }
 
