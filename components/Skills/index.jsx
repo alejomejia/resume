@@ -1,6 +1,6 @@
-import { useState, useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import axios from 'axios'
+import useAxios from 'hooks/use-axios'
 
 import Box from 'components/Box'
 import Heading from 'components/Heading'
@@ -11,23 +11,12 @@ import { Component } from './styled'
 
 const Skills = ({}) => {
   const theme = useContext(ThemeContext)
+  const { response } = useAxios('/skills')
 
-  const [hardSkills, setHardSkills] = useState([])
-  const [softSkills, setSoftSkills] = useState([])
+  const hardSkills = response && response[0].skills
+  const softSkills = response && response[1].skills
 
-  useEffect(() => {
-    const getSkills = (async) => {
-      axios
-        .get('/api/skills')
-        .then((res) => {
-          setHardSkills(res.data[0].skills)
-          setSoftSkills(res.data[1].skills)
-        })
-        .catch((err) => console.err(err))
-    }
-
-    getSkills()
-  }, [])
+  console.log(hardSkills)
 
   return (
     <Component className="skills">
@@ -36,7 +25,6 @@ const Skills = ({}) => {
       </Heading>
       <Heading
         as="h4"
-        // color={theme.colors.text200}
         size={theme.fonts.size.l}
         weight={theme.fonts.weight.regular}
         mb={theme.spacing(1)}
@@ -46,14 +34,12 @@ const Skills = ({}) => {
       </Heading>
       <Box mb={theme.spacing(3)}>
         <Flex wrap="wrap" gap={theme.spacing(1)}>
-          {hardSkills.map((sk) => (
-            <Tag key={sk.id}>{sk.name}</Tag>
-          ))}
+          {hardSkills &&
+            hardSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)}
         </Flex>
       </Box>
       <Heading
         as="h4"
-        // color={theme.colors.text200}
         size={theme.fonts.size.l}
         weight={theme.fonts.weight.regular}
         mb={theme.spacing(1)}
@@ -63,9 +49,8 @@ const Skills = ({}) => {
       </Heading>
       <Box mb={theme.spacing(3)}>
         <Flex wrap="wrap" gap={theme.spacing(1)}>
-          {softSkills.map((sk) => (
-            <Tag key={sk.id}>{sk.name}</Tag>
-          ))}
+          {softSkills &&
+            softSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)}
         </Flex>
       </Box>
     </Component>

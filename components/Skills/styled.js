@@ -13,12 +13,18 @@ export const Component = styled.div`
     padding-left: ${({ theme }) => theme.spacing(2)};
     padding-right: ${({ theme }) => theme.spacing(2)};
     margin-bottom: ${({ theme }) => theme.spacing(3)};
+  }
 
-    h3.heading .heading__title {
+  h3.heading .heading__title {
+    @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
       font-size: ${({ theme }) => theme.fonts.size.l};
     }
+  }
 
-    h4.heading .heading__title {
+  h4.heading .heading__title {
+    color: var(--color-text-200);
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
       font-size: ${({ theme }) => theme.fonts.size.m};
     }
   }

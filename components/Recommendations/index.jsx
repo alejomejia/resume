@@ -19,7 +19,7 @@ const Recommendations = ({}) => {
         .then((res) => {
           setRecommendations(res.data)
         })
-        .catch((err) => console.err(err))
+        .catch((err) => console.error(err))
     }
 
     getRecommendations()

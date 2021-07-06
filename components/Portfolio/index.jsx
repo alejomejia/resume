@@ -19,7 +19,7 @@ const Portfolio = ({}) => {
         .then((res) => {
           setPortfolio(res.data)
         })
-        .catch((err) => console.err(err))
+        .catch((err) => console.error(err))
     }
 
     getPortfolio()

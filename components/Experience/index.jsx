@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import axios from 'axios'
 
-import Box from 'components/Box'
 import Heading from 'components/Heading'
 import Item from './Item'
 
@@ -20,7 +19,7 @@ const Experience = ({}) => {
         .then((res) => {
           setExperience(res.data)
         })
-        .catch((err) => console.err(err))
+        .catch((err) => console.error(err))
     }
 
     getExperience()
