@@ -58,6 +58,7 @@ export const Component = styled.article`
       color: var(--color-white);
 
       @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        align-self: flex-start;
         padding-top: ${({ theme }) => theme.spacing(2)};
         padding-right: 0;
       }
