@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import useSound from 'use-sound'
 
 import { store } from 'context/store'
+import * as gtag from 'lib/gtag'
 
 import Boop from '../Boop'
 import { Component } from './styled'
@@ -26,7 +27,10 @@ const Footer = () => {
 
   const handleOnEnter = () => popEnter()
 
-  const handleOnClick = () => popClick()
+  const handleOnClick = () => {
+    popClick()
+    gtag.event({ action: 'lets_talk', category: 'cta' })
+  }
 
   return (
     <Component className="footer">

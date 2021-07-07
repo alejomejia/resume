@@ -3,6 +3,7 @@ import { ThemeContext } from 'styled-components'
 import useSound from 'use-sound'
 
 import { store } from 'context/store'
+import * as gtag from 'lib/gtag'
 
 import Heading from 'components/Heading'
 import Flex from 'components/Flex'
@@ -28,7 +29,15 @@ const Social = ({}) => {
 
   const handleOnEnter = () => popEnter()
 
-  const handleOnClick = () => popClick()
+  const clickLinkedIn = () => {
+    popClick()
+    gtag.event({ action: 'social_linkedin', category: 'social' })
+  }
+
+  const clickGithub = () => {
+    popClick()
+    gtag.event({ action: 'social_github', category: 'social' })
+  }
 
   return (
     <Component className="social">
@@ -41,7 +50,7 @@ const Social = ({}) => {
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
-          onClick={handleOnClick}
+          onClick={clickLinkedIn}
         >
           <Boop config={{ y: -3 }}>
             <Icon name="linkedin" width={32} />
@@ -52,7 +61,7 @@ const Social = ({}) => {
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
-          onClick={handleOnClick}
+          onClick={clickGithub}
         >
           <Boop config={{ y: -3 }}>
             <Icon name="github" width={32} />

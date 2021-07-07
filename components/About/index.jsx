@@ -3,6 +3,7 @@ import { ThemeContext } from 'styled-components'
 import useSound from 'use-sound'
 
 import { store } from 'context/store'
+import * as gtag from 'lib/gtag'
 
 import Heading from 'components/Heading'
 import Boop from 'components/Boop'
@@ -28,7 +29,10 @@ const About = () => {
 
   const handleOnEnter = () => popEnter()
 
-  const handleOnClick = () => popClick()
+  const handleOnClick = () => {
+    popClick()
+    gtag.event({ action: 'download_pdf', category: 'cta' })
+  }
 
   return (
     <Component className="about">

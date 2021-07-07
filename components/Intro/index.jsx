@@ -1,3 +1,5 @@
+import * as gtag from 'lib/gtag'
+
 import Icon from 'components/Icon'
 
 import Hello from './Hello'
@@ -7,6 +9,10 @@ import Cyan from './svg/Cyan'
 import { Component } from './styled'
 
 const Intro = () => {
+  const gtagEventEmail = () => {
+    gtag.event({ action: 'send_email', category: 'link' })
+  }
+
   return (
     <Component className="intro">
       <div className="content">
@@ -21,6 +27,7 @@ const Intro = () => {
           <a
             className="content__contact-link"
             href="mailto:alejomejiacuartas@outlook.com"
+            onClick={gtagEventEmail}
           >
             <span className="content__icon">
               <Icon name="mail" fill="#fff" />

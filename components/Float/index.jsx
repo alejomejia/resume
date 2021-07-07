@@ -3,6 +3,8 @@ import { store } from 'context/store'
 import { useTheme } from 'next-themes'
 import useSound from 'use-sound'
 
+import * as gtag from 'lib/gtag'
+
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
 
@@ -45,6 +47,8 @@ const Float = () => {
   const handleSounds = () => {
     setIsSoundEnable(!isSoundEnable)
     isSoundEnable ? soundOff() : soundOn()
+
+    gtag.event({ action: 'sound_trigger', category: 'widgets' })
   }
 
   useEffect(() => {
@@ -56,6 +60,7 @@ const Float = () => {
     const isDarkMode = browserTheme === 'dark'
     setTheme(isDarkMode ? 'light' : 'dark')
     isDarkMode ? themeOff() : themeOn()
+    gtag.event({ action: 'theme_trigger', category: 'widgets' })
   }
 
   const handleMouseEnter = () => {
