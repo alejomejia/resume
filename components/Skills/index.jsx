@@ -7,6 +7,7 @@ import Heading from 'components/Heading'
 import Flex from 'components/Flex'
 import Tag from 'components/Tag'
 
+import Skeleton from './Skeleton'
 import { Component } from './styled'
 
 const Skills = ({}) => {
@@ -32,8 +33,11 @@ const Skills = ({}) => {
       </Heading>
       <Box mb={theme.spacing(3)}>
         <Flex wrap="wrap" gap={theme.spacing(1)}>
-          {hardSkills &&
-            hardSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)}
+          {hardSkills ? (
+            hardSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)
+          ) : (
+            <Skeleton pills={15} />
+          )}
         </Flex>
       </Box>
       <Heading
@@ -47,8 +51,11 @@ const Skills = ({}) => {
       </Heading>
       <Box mb={theme.spacing(3)}>
         <Flex wrap="wrap" gap={theme.spacing(1)}>
-          {softSkills &&
-            softSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)}
+          {softSkills ? (
+            softSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)
+          ) : (
+            <Skeleton pills={10} />
+          )}
         </Flex>
       </Box>
     </Component>

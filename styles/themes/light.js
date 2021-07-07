@@ -9,6 +9,7 @@ const lightTheme = css`
     --color-bg-accent: hsl(240, 5%, 95%);
     --color-tag: hsl(240, 4%, 46%);
     --color-cta: hsl(240, 5%, 34%);
+    --color-skeleton: hsl(0, 0%, 88%);
     --color-text-100: hsl(240, 5%, 65%);
     --color-text-200: hsl(240, 4%, 46%);
     --color-text-300: hsl(240, 5%, 34%);
