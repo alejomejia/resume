@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import useSound from 'use-sound'
 
 import { store } from 'context/store'
+import * as gtag from 'lib/gtag'
 
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
@@ -26,7 +27,20 @@ const PortfolioItem = ({ title, stack, image, external }) => {
 
   const handleOnEnter = () => popEnter()
 
-  const handleOnClick = () => popClick()
+  const handleOnClick = (e) => {
+    popClick()
+
+    const getID = e.currentTarget.id
+    const iconList = {
+      code: 'repository',
+      globe: 'website',
+      storybook: 'storybook'
+    }
+
+    const icon = iconList[getID]
+
+    gtag.event({ action: `portfolio_${icon}`, category: 'portfolio' })
+  }
 
   return (
     <Component className="portfolio-item" image={image}>
@@ -48,6 +62,7 @@ const PortfolioItem = ({ title, stack, image, external }) => {
             return (
               <Boop key={item.id} config={{ scale: 0.95 }}>
                 <a
+                  id={iconName}
                   className="portfolio__button"
                   href={item.link}
                   target="_blank"

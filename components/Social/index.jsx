@@ -29,14 +29,11 @@ const Social = ({}) => {
 
   const handleOnEnter = () => popEnter()
 
-  const clickLinkedIn = () => {
+  const handleClick = (e) => {
     popClick()
-    gtag.event({ action: 'social_linkedin', category: 'social' })
-  }
 
-  const clickGithub = () => {
-    popClick()
-    gtag.event({ action: 'social_github', category: 'social' })
+    const social = e.currentTarget.id
+    gtag.event({ action: `social_${social}`, category: 'social' })
   }
 
   return (
@@ -46,22 +43,24 @@ const Social = ({}) => {
       </Heading>
       <Flex wrap="wrap" gap={theme.spacing(1)}>
         <Link
+          id="linkedin"
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
-          onClick={clickLinkedIn}
+          onClick={handleClick}
         >
           <Boop config={{ y: -3 }}>
             <Icon name="linkedin" width={32} />
           </Boop>
         </Link>
         <Link
+          id="github"
           href="https://github.com/alejomejia"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
-          onClick={clickGithub}
+          onClick={handleClick}
         >
           <Boop config={{ y: -3 }}>
             <Icon name="github" width={32} />
