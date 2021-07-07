@@ -3,8 +3,9 @@ import { ThemeContext } from 'styled-components'
 import useAxios from 'hooks/use-axios'
 
 import Heading from 'components/Heading'
-import Item from './Item'
 
+import Item from './Item'
+import Skeleton from './Skeleton'
 import { Component } from './styled'
 
 const Recommendations = () => {
@@ -18,7 +19,7 @@ const Recommendations = () => {
       <Heading as="h3" icon="bolt" mb={theme.spacing(3)}>
         Recommendations
       </Heading>
-      {recommendations &&
+      {recommendations ? (
         recommendations.map((item) => (
           <Item
             key={item.id}
@@ -29,7 +30,10 @@ const Recommendations = () => {
             title={item.title}
             description={item.description}
           />
-        ))}
+        ))
+      ) : (
+        <Skeleton />
+      )}
       <small>
         If you want to check these and more recommendations of my work, please
         take a look to my{' '}
