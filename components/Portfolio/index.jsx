@@ -3,8 +3,9 @@ import { ThemeContext } from 'styled-components'
 import useAxios from 'hooks/use-axios'
 
 import Heading from 'components/Heading'
-import Item from './Item'
 
+import Item from './Item'
+import Skeleton from './Skeleton'
 import { Component } from './styled'
 
 const Portfolio = () => {
@@ -19,7 +20,7 @@ const Portfolio = () => {
         Portfolio
       </Heading>
       <div className="portfolio__grid">
-        {portfolio &&
+        {portfolio ? (
           portfolio.map((item) => (
             <Item
               key={item.id}
@@ -28,7 +29,10 @@ const Portfolio = () => {
               image={item.image}
               external={item.external}
             />
-          ))}
+          ))
+        ) : (
+          <Skeleton />
+        )}
       </div>
     </Component>
   )
