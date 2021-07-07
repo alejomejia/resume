@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Component = styled.div`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background-color: var(--color-skeleton);
   border-radius: 4px;
   will-change: opacity;

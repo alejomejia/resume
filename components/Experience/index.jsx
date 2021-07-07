@@ -5,6 +5,7 @@ import useAxios from 'hooks/use-axios'
 import Heading from 'components/Heading'
 import Item from './Item'
 
+import Skeleton from './Skeleton'
 import { Component } from './styled'
 
 const Experience = ({}) => {
@@ -18,7 +19,7 @@ const Experience = ({}) => {
       <Heading as="h3" icon="briefcase" mb={theme.spacing(3)}>
         Relevant Experience
       </Heading>
-      {experience &&
+      {experience ? (
         experience.map((item) => (
           <Item
             key={item.id}
@@ -30,7 +31,10 @@ const Experience = ({}) => {
             endDate={item.endDate}
             description={item.description}
           />
-        ))}
+        ))
+      ) : (
+        <Skeleton />
+      )}
     </Component>
   )
 }

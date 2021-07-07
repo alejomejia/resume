@@ -7,13 +7,13 @@ const Skeleton = ({ width, height }) => {
 }
 
 Skeleton.defaultProps = {
-  width: 25,
-  height: 25
+  width: '25px',
+  height: '25px'
 }
 
 Skeleton.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number
+  width: PropTypes.string,
+  height: PropTypes.string
 }
 
 export default Skeleton
