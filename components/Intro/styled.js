@@ -1,13 +1,37 @@
 import styled from 'styled-components'
 
 export const Component = styled.div`
+  margin-top: ${({ theme }) => theme.spacing(5)};
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin-top: ${({ theme }) => theme.spacing(3)};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin-top: 0;
+    margin-bottom: ${({ theme }) => theme.spacing(4)};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+    margin-bottom: ${({ theme }) => theme.spacing(3)};
+  }
+
   &.intro {
     overflow: hidden;
     position: relative;
     min-height: 480px;
-    color: ${({ theme }) => theme.palette.white};
+    color: var(--color-white);
     background-color: hsl(245 69% 23%);
     border-radius: ${({ theme }) => theme.spacing(1)};
+    // Safari fix for rounded borders
+    transform: translateZ(0);
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+      border-radius: 0;
+      min-height: 355px;
+      text-align: center;
+    }
 
     .content {
       position: absolute;
@@ -18,6 +42,22 @@ export const Component = styled.div`
       padding: ${({ theme }) => theme.spacing(6)};
       z-index: 10;
 
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        padding: ${({ theme }) => theme.spacing(4)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+        padding: ${({ theme }) => theme.spacing(3)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+        padding: ${({ theme }) => theme.spacing(4)};
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        padding: ${({ theme }) => theme.spacing(3)};
+      }
+
       &__hello {
         font-size: 48px;
         margin-bottom: ${({ theme }) => theme.spacing(2)};
@@ -27,8 +67,24 @@ export const Component = styled.div`
         font-size: ${({ theme }) => theme.fonts.size.xxl};
         font-weight: ${({ theme }) => theme.fonts.weight.light};
         line-height: 1;
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+          font-size: ${({ theme }) => theme.fonts.size.xl};
+          line-height: 1.2;
+        }
       }
 
+      &__name {
+        color: var(--color-white);
+        font-size: ${({ theme }) => theme.fonts.size.xxxl};
+        margin-bottom: ${({ theme }) => theme.spacing(2)};
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+          font-size: ${({ theme }) => theme.fonts.size.xxl};
+        }
+      }
+
+      &__job-title,
       &__location {
         font-size: ${({ theme }) => theme.fonts.size.l};
         font-family: ${({ theme }) => theme.fonts.family.secondary};
@@ -36,23 +92,30 @@ export const Component = styled.div`
       }
 
       &__contact {
-        display: flex;
-        align-items: center;
-        margin-top: ${({ theme }) => theme.spacing(7)};
+        &-link {
+          display: flex;
+          align-items: center;
+          color: var(--color-white);
+          margin-top: ${({ theme }) => theme.spacing(7)};
+
+          @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+            font-size: ${({ theme }) => theme.fonts.size.sm};
+          }
+
+          @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+            font-size: ${({ theme }) => theme.fonts.size.default};
+            margin-top: ${({ theme }) => theme.spacing(5)};
+            justify-content: center;
+          }
+        }
       }
 
       &__icon {
-        display: flex;
-        align-items: center;
       }
 
       &__email {
         display: inline-block;
         margin-left: ${({ theme }) => theme.spacing(1)};
-
-        a {
-          color: ${({ theme }) => theme.palette.white};
-        }
       }
     }
 

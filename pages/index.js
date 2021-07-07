@@ -1,25 +1,42 @@
+// Handle Theme switch
+import { useContext } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { store } from '../context/store'
+
+import GlobalCSS from '../styles/global'
+import GENERAL from '../styles/themes/general'
+
+// Components
 import Head from '../components/Head'
 import Container from '../components/Container'
-import Grid from '../components/Grid'
+import Float from '../components/Float'
+import PageGrid from '../components/PageGrid'
 
 import Intro from '../components/Intro'
 import Skills from '../components/Skills'
+import Education from '../components/Education'
 import Languages from '../components/Languages'
 import Social from '../components/Social'
 
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Portfolio from '../components/Portfolio'
+import Recommendations from '../components/Recommendations'
+
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <>
+    <ThemeProvider theme={GENERAL}>
+      <GlobalCSS />
       <Head title="Resume :: Alejandro Mejia" />
       <Container>
-        <Grid gap="48px" columns="450px 1fr">
+        <Float />
+        <PageGrid>
           <aside>
             <Intro />
             <Skills />
+            <Education />
             <Languages />
             <Social />
           </aside>
@@ -27,10 +44,12 @@ const Home = () => {
             <About />
             <Experience />
             <Portfolio />
+            <Recommendations />
           </main>
-        </Grid>
+        </PageGrid>
       </Container>
-    </>
+      <Footer />
+    </ThemeProvider>
   )
 }
 

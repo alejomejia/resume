@@ -1,10 +1,10 @@
-import styled, { ThemeConsumer } from 'styled-components'
+import styled from 'styled-components'
 
 export const Component = styled.span`
-  display: inline-flex;
+  display: grid;
 
   svg {
-    fill: ${(props) => (props.fill ? props.fill : props.theme.colors.text100)};
+    fill: ${(props) => (props.fill ? props.fill : 'var(--color-text-100)')};
     width: ${(props) => props.width}px;
   }
 `

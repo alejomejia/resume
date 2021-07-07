@@ -1,11 +1,8 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { ThemeProvider } from 'styled-components'
+import { StoreProvider } from '../context/store'
+import { ThemeProvider } from 'next-themes'
 import * as gtag from '../lib/gtag'
-
-import GlobalCSS from '../styles/global'
-import GENERAL from '../styles/themes/general'
-import LIGHT from '../styles/themes/light'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -20,12 +17,11 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <ThemeProvider theme={GENERAL}>
-      <ThemeProvider theme={LIGHT}>
-        <GlobalCSS />
+    <StoreProvider>
+      <ThemeProvider defaultTheme="system">
         <Component {...pageProps} />
       </ThemeProvider>
-    </ThemeProvider>
+    </StoreProvider>
   )
 }
 

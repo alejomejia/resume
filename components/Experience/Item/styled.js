@@ -1,23 +1,26 @@
 import styled from 'styled-components'
+import Card from 'components/Card'
 
-export const Component = styled.article`
-  margin-bottom: ${({ theme }) => theme.spacing(2.5)};
-  padding: ${({ theme }) => theme.spacing(3)};
-  background-color: ${({ theme }) => theme.palette.white};
-  border-radius: 8px;
-  box-shadow: ${({ theme }) => theme.shadows.card};
-
+export const Component = styled(Card)`
   .experience-item {
     &__header {
       display: flex;
       margin-bottom: ${({ theme }) => theme.spacing(2)};
 
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: column;
+      }
+
       &-left {
         margin-right: ${({ theme }) => theme.spacing(1.5)};
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+          margin-bottom: ${({ theme }) => theme.spacing(1)};
+        }
       }
 
       &-right-bottom {
-        color: ${({ theme }) => theme.colors.text100};
+        color: var(--color-text-100);
       }
     }
   }
@@ -29,12 +32,12 @@ export const Component = styled.article`
 
     &__title {
       display: inline-block;
-      color: ${({ theme }) => theme.colors.text200};
+      color: var(--color-text-200);
       margin-right: ${({ theme }) => theme.spacing(0.5)};
     }
 
     &__at {
-      color: ${({ theme }) => theme.palette.primary};
+      color: var(--color-primary);
     }
 
     &__start-date,

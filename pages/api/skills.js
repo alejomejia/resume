@@ -105,6 +105,10 @@ export default function handler(req, res) {
           name: 'Social Skills'
         },
         {
+          id: 9,
+          name: 'Taking Criticism'
+        },
+        {
           id: 4,
           name: 'Proactivity'
         },

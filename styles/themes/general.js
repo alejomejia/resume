@@ -1,8 +1,4 @@
 const general = {
-  palette: {
-    white: 'hsl(0, 0%, 100%)',
-    primary: 'hsl(195, 100%, 50%)'
-  },
   fonts: {
     size: {
       xxxl: '2.25rem', // 36px
@@ -26,7 +22,8 @@ const general = {
     }
   },
   breakpoints: {
-    l: '1440px',
+    xl: '1440px',
+    l: '1200px',
     m: '1024px',
     s: '768px',
     xs: '550px',

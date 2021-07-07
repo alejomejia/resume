@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Component = styled.article`
   position: relative;
+  display: flex;
   min-height: 260px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
@@ -9,6 +10,8 @@ export const Component = styled.article`
   background-position: center;
   border-radius: 8px;
   overflow: hidden;
+  // Safari fix for rounded borders
+  transform: translateZ(0);
 
   &.portfolio-item {
     & > div:first-child {
@@ -26,23 +29,39 @@ export const Component = styled.article`
   .portfolio-item {
     &__container {
       display: flex;
+      flex: 1;
       align-items: flex-end;
       justify-content: space-between;
       min-height: 100%;
       padding: ${({ theme }) => theme.spacing(3)};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: column-reverse;
+        padding: ${({ theme }) => theme.spacing(2)};
+      }
     }
 
     &__buttons {
       display: flex;
       flex-direction: column;
       gap: 8px;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        flex-direction: row;
+      }
     }
   }
 
   .portfolio {
     &__content {
       padding-right: ${({ theme }) => theme.spacing(2)};
-      color: ${({ theme }) => theme.palette.white};
+      color: var(--color-white);
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+        align-self: flex-start;
+        padding-top: ${({ theme }) => theme.spacing(2)};
+        padding-right: 0;
+      }
     }
 
     &__title {
@@ -50,7 +69,13 @@ export const Component = styled.article`
     }
 
     &__stack {
+      display: inline-block;
       font-size: ${({ theme }) => theme.fonts.size.sm};
+      line-height: 1.4;
+      margin-top: ${({ theme }) => theme.spacing(1)};
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+      }
     }
 
     &__button {
@@ -60,7 +85,7 @@ export const Component = styled.article`
       width: 40px;
       height: 40px;
       opacity: 0.6;
-      background-color: ${({ theme }) => theme.palette.white};
+      background-color: var(--color-white);
       border-radius: 8px;
       transition: opacity 0.35s ease;
 
@@ -84,6 +109,10 @@ export const Component = styled.article`
       z-index: 1;
       backdrop-filter: blur(4px);
       transition: backdrop-filter 0.35s ease;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+        backdrop-filter: blur(0);
+      }
     }
   }
 `
