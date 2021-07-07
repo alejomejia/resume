@@ -15,7 +15,7 @@ const Float = () => {
   const [browserTheme, setBrowserTheme] = useState('')
 
   const [popEnter] = useSound('/sounds/pop.mp3', {
-    playbackRate: 0.9,
+    playbackRate: 1.5,
     volume: 0.5,
     soundEnabled: isSoundEnable
   })

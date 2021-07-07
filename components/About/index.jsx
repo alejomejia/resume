@@ -1,13 +1,34 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
+import useSound from 'use-sound'
+
+import { store } from 'context/store'
 
 import Heading from 'components/Heading'
+import Boop from 'components/Boop'
 import Button from 'components/Button'
 
 import { Component } from './styled'
 
 const About = () => {
   const theme = useContext(ThemeContext)
+  const { isSoundEnable } = useContext(store)
+
+  const [popEnter] = useSound('/sounds/pop.mp3', {
+    playbackRate: 1.1,
+    volume: 0.5,
+    soundEnabled: isSoundEnable
+  })
+
+  const [popClick] = useSound('/sounds/pop.mp3', {
+    playbackRate: 1.2,
+    volume: 0.5,
+    soundEnabled: isSoundEnable
+  })
+
+  const handleOnEnter = () => popEnter()
+
+  const handleOnClick = () => popClick()
 
   return (
     <Component className="about">
@@ -27,7 +48,15 @@ const About = () => {
             and movies, travel and ride in my motorcycle.
           </p>
         </div>
-        <Button icon="arrow">Download CV</Button>
+        <Boop config={{ y: -3 }}>
+          <Button
+            icon="arrow"
+            onClick={handleOnClick}
+            onMouseEnter={handleOnEnter}
+          >
+            Download in PDF
+          </Button>
+        </Boop>
       </div>
     </Component>
   )

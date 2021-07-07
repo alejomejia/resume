@@ -27,6 +27,8 @@ export const Component = styled.footer`
     }
 
     &__text {
+      display: flex;
+      gap: 8px;
       color: var(--color-text-200);
       font-size: ${({ theme }) => theme.fonts.size.xl};
 
