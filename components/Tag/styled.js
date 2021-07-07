@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Component = styled.span`
+export const Component = styled.li`
   display: inline-block;
   padding-left: 8px;
   padding-right: 8px;

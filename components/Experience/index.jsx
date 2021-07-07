@@ -3,8 +3,8 @@ import { ThemeContext } from 'styled-components'
 import useAxios from 'hooks/use-axios'
 
 import Heading from 'components/Heading'
-import Item from './Item'
 
+import Item from './Item'
 import Skeleton from './Skeleton'
 import { Component } from './styled'
 

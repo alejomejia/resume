@@ -32,7 +32,7 @@ const Skills = ({}) => {
         Hard
       </Heading>
       <Box mb={theme.spacing(3)}>
-        <Flex wrap="wrap" gap={theme.spacing(1)}>
+        <Flex as="ul" wrap="wrap" gap={theme.spacing(1)}>
           {hardSkills ? (
             hardSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)
           ) : (
@@ -50,7 +50,7 @@ const Skills = ({}) => {
         Soft
       </Heading>
       <Box mb={theme.spacing(3)}>
-        <Flex wrap="wrap" gap={theme.spacing(1)}>
+        <Flex as="ul" wrap="wrap" gap={theme.spacing(1)}>
           {softSkills ? (
             softSkills.map((sk) => <Tag key={sk.id}>{sk.name}</Tag>)
           ) : (

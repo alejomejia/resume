@@ -14,6 +14,7 @@ import PageGrid from '../components/PageGrid'
 
 import Intro from '../components/Intro'
 import Skills from '../components/Skills'
+import Education from '../components/Education'
 import Languages from '../components/Languages'
 import Social from '../components/Social'
 
@@ -35,6 +36,7 @@ const Home = () => {
           <aside>
             <Intro />
             <Skills />
+            <Education />
             <Languages />
             <Social />
           </aside>

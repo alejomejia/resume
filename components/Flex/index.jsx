@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { Component } from './styled'
 
-const Flex = ({ gap, align, justify, direction, wrap, children }) => {
+const Flex = ({ as, gap, align, justify, direction, wrap, children }) => {
   return (
     <Component
+      as={as}
       gap={gap}
       align={align}
       justify={justify}
@@ -16,6 +17,7 @@ const Flex = ({ gap, align, justify, direction, wrap, children }) => {
 }
 
 Flex.propTypes = {
+  as: PropTypes.string,
   gap: PropTypes.string,
   align: PropTypes.oneOf(['stretch', 'flex-start', 'center', 'flex-end']),
   justify: PropTypes.oneOf([

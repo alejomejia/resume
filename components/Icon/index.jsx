@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+import IconAcademic from './icons/academic'
 import IconArrow from './icons/arrow'
 import IconBadge from './icons/badge'
 import IconBolt from './icons/bolt'
@@ -22,6 +23,7 @@ import IconVolume from './icons/volume'
 import { Component } from './styled'
 
 export const SVG = {
+  academic: IconAcademic,
   arrow: IconArrow,
   badge: IconBadge,
   bolt: IconBolt,

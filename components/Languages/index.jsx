@@ -15,7 +15,7 @@ const Languages = ({}) => {
       <Heading as="h3" icon="chat" mb={theme.spacing(1.5)}>
         Languages
       </Heading>
-      <Flex wrap="wrap" gap={theme.spacing(1)}>
+      <Flex as="ul" wrap="wrap" gap={theme.spacing(1)}>
         <Tag>English - Advanced</Tag>
         <Tag>Spanish - Native</Tag>
       </Flex>
