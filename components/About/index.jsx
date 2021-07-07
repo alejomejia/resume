@@ -48,7 +48,7 @@ const About = () => {
             and movies, travel and ride in my motorcycle.
           </p>
         </div>
-        <Boop config={{ y: -3 }}>
+        <Boop className="about__boop" config={{ y: -3 }}>
           <Button
             icon="arrow"
             onClick={handleOnClick}

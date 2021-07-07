@@ -47,6 +47,10 @@ export const Component = styled.section`
       }
     }
 
+    &__boop {
+      max-width: fit-content;
+    }
+
     &__content {
       margin-bottom: ${({ theme }) => theme.spacing(4)};
 

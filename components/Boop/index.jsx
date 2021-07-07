@@ -2,11 +2,11 @@ import { animated } from 'react-spring'
 import PropTypes from 'prop-types'
 import useBoop from 'hooks/use-boop'
 
-const Boop = ({ children, config }) => {
+const Boop = ({ children, config, ...rest }) => {
   const [style, trigger] = useBoop(config)
 
   return (
-    <animated.span onMouseEnter={trigger} style={style}>
+    <animated.span onMouseEnter={trigger} style={style} {...rest}>
       {children}
     </animated.span>
   )
