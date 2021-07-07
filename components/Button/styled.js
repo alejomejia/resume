@@ -14,6 +14,11 @@ export const Component = styled.button`
   letter-spacing: 1px;
   border: 0;
   border-radius: 8px;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
 
   .button {
     &__text {

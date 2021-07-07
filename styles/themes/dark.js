@@ -6,7 +6,7 @@ const darkTheme = css`
     --color-bg: hsl(221, 22%, 14%);
     --color-bg-accent: hsl(222, 20%, 11%);
     --color-tag: hsl(216, 19%, 22%);
-    --color-cta: hsl(195, 100%, 50%);
+    --color-cta: hsl(222, 20%, 17%);
     --color-skeleton: hsl(219, 16%, 23%);
     --color-text-100: hsl(211, 8%, 50%);
     --color-text-200: hsl(210, 14%, 66%);
