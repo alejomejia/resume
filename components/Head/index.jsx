@@ -12,7 +12,7 @@ const Head = ({ title }) => {
      user-scalable=0"
       />
       {/* Social Tags */}
-      <meta property="og:title" content="Alejandro Mejia Resume" />
+      <meta property="og:title" content="Resume :: Alejandro Mejia" />
       <meta
         property="og:image"
         content="https://resume.alejandromejia.co/social-media-cover.png"
