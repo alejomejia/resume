@@ -10,15 +10,10 @@ export const Component = styled.button`
   font-family: ${({ theme }) => theme.fonts.family.primary};
   font-weight: ${({ theme }) => theme.fonts.weight.regular};
   text-transform: uppercase;
-  background-color: var(--color-cta);
+  background-color: var(--color-primary);
   letter-spacing: 1px;
   border: 0;
   border-radius: 8px;
-  transition: background-color 0.15s ease;
-
-  &:hover {
-    background-color: var(--color-primary);
-  }
 
   .button {
     &__text {

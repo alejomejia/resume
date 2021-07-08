@@ -35,9 +35,9 @@ const Home = () => {
         <PageGrid>
           <aside>
             <Intro />
+            <Languages />
             <Skills />
             <Education />
-            <Languages />
             <Social />
           </aside>
           <main>

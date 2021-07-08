@@ -1,7 +1,22 @@
+import { useState, useEffect } from 'react'
 import HTMLHead from 'next/head'
 import PropTypes from 'prop-types'
 
 const Head = ({ title }) => {
+  const [yearsOfExperience, setYearsOfExperience] = useState('')
+
+  useEffect(() => {
+    const currentYear = new Date().getFullYear()
+    const firstJobYear = 2013
+
+    setYearsOfExperience(currentYear - firstJobYear)
+  }, [])
+
+  const socialTitle = 'Resume :: Alejandro Mejia'
+  const socialImage = 'https://resume.alejandromejia.co/social-media-cover.png'
+  const socialDescription = `Hey 👋🏻! I'm Alejandro, Product Developer with ${yearsOfExperience} years of experience making awesome UIs and improving UX`
+  const socialUrl = 'https://resume.alejandromejia.co'
+
   return (
     <HTMLHead>
       <title>{title}</title>
@@ -12,16 +27,10 @@ const Head = ({ title }) => {
      user-scalable=0"
       />
       {/* Social Tags */}
-      <meta property="og:title" content="Resume :: Alejandro Mejia" />
-      <meta
-        property="og:image"
-        content="https://resume.alejandromejia.co/social-media-cover.png"
-      />
-      <meta
-        property="og:description"
-        content="Hey 👋🏻! I'm Product Developer with 8 years of experience making awesome user interfaces and improve them for better user experience"
-      />
-      <meta property="og:url" content="https://resume.alejandromejia.co" />
+      <meta property="og:title" content={socialTitle} />
+      <meta property="og:image" content={socialImage} />
+      <meta property="og:description" content={socialDescription} />
+      <meta property="og:url" content={socialUrl} />
     </HTMLHead>
   )
 }

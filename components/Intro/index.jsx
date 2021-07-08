@@ -3,8 +3,8 @@ import * as gtag from 'lib/gtag'
 import Icon from 'components/Icon'
 
 import Hello from './Hello'
-import ArtCenter from './svg/Center'
-import ArtSpinner from './svg/Spinner'
+import ArtCenter from './Art/Center'
+import ArtSpinner from './Art/Spinner'
 
 import { Component } from './styled'
 
