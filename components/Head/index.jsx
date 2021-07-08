@@ -19,7 +19,7 @@ const Head = ({ title }) => {
       />
       <meta
         property="og:description"
-        content="Hey 👋🏻! I'm Product Developer with 8 years of coding experience on the UI side"
+        content="Hey 👋🏻! I'm Product Developer with 8 years of experience making awesome user interfaces and improve them for better user experience"
       />
       <meta property="og:url" content="https://resume.alejandromejia.co" />
     </HTMLHead>
