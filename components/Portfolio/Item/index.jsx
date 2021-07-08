@@ -30,15 +30,14 @@ const PortfolioItem = ({ title, stack, image, external }) => {
   const handleOnClick = (e) => {
     popClick()
 
-    const getID = e.currentTarget.id
+    const getType = e.currentTarget.dataset.type
     const iconList = {
       code: 'repository',
       globe: 'website',
       storybook: 'storybook'
     }
 
-    const icon = iconList[getID]
-
+    const icon = iconList[getType]
     gtag.event({ action: `portfolio_${icon}`, category: 'portfolio' })
   }
 
@@ -62,13 +61,13 @@ const PortfolioItem = ({ title, stack, image, external }) => {
             return (
               <Boop key={item.id} config={{ scale: 0.95 }}>
                 <a
-                  id={iconName}
                   className="portfolio__button"
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
                   onMouseEnter={handleOnEnter}
                   onClick={handleOnClick}
+                  data-type={iconName}
                 >
                   <Icon name={iconName} width={24} />
                 </a>

@@ -32,7 +32,7 @@ const Social = ({}) => {
   const handleClick = (e) => {
     popClick()
 
-    const social = e.currentTarget.id
+    const social = e.currentTarget.dataset.social
     gtag.event({ action: `social_${social}`, category: 'social' })
   }
 
@@ -43,24 +43,24 @@ const Social = ({}) => {
       </Heading>
       <Flex wrap="wrap" gap={theme.spacing(1)}>
         <Link
-          id="linkedin"
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
           onClick={handleClick}
+          data-social="linkedin"
         >
           <Boop config={{ y: -3 }}>
             <Icon name="linkedin" width={32} />
           </Boop>
         </Link>
         <Link
-          id="github"
           href="https://github.com/alejomejia"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleOnEnter}
           onClick={handleClick}
+          data-social="github"
         >
           <Boop config={{ y: -3 }}>
             <Icon name="github" width={32} />
