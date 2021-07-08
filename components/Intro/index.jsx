@@ -3,8 +3,8 @@ import * as gtag from 'lib/gtag'
 import Icon from 'components/Icon'
 
 import Hello from './Hello'
-import Purple from './svg/Purple'
-import Cyan from './svg/Cyan'
+import ArtCenter from './svg/Center'
+import ArtSpinner from './svg/Spinner'
 
 import { Component } from './styled'
 
@@ -40,10 +40,10 @@ const Intro = () => {
       </div>
       <div className="art">
         <div className="art__figure-1">
-          <Purple />
+          <ArtCenter />
         </div>
         <div className="art__figure-2">
-          <Cyan />
+          <ArtSpinner />
         </div>
       </div>
     </Component>

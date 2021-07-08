@@ -22,7 +22,7 @@ export const Component = styled.div`
     position: relative;
     min-height: 480px;
     color: var(--color-white);
-    background-color: hsl(245 69% 23%);
+    background-color: var(--color-art-bg);
     border-radius: ${({ theme }) => theme.spacing(1)};
     // Safari fix for rounded borders
     transform: translateZ(0);
