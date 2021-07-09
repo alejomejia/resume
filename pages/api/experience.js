@@ -42,7 +42,7 @@ export default function handler(req, res) {
       startDate: 'July 2018',
       endDate: 'September 2019',
       description:
-        'I was, from start to end, building an entire website for a prestigious university from my city. The customer send us the designs and I turn them to life coding it on WordPress. One of the biggest challenges was to make it fully accesible so I had to research a lot and learn about a11y implementation, testing and debugging.'
+        'I was, from start to end, building an entire website for a prestigious university from my city. The customer sent us the designs and I turned them to life. All the coding was in WordPress. One of the biggest challenges was to make it fully accesible so I had to research a lot and learn about a11y implementation, testing and debugging.'
     }
   ])
 }

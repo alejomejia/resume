@@ -21,7 +21,7 @@ const Intro = () => {
         </span>
         <span className="content__preffix">My name is</span>
         <h1 className="content__name">Alejandro Mejia</h1>
-        <h2 className="content__job-title">Product Developer</h2>
+        <h2 className="content__job-title">UX UI Developer</h2>
         <span className="content__location">From Medellin, CO 🇨🇴</span>
         <div className="content__contact">
           <a

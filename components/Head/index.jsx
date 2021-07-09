@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Head = ({ title }) => {
   const socialTitle = 'Resume :: Alejandro Mejia'
   const socialImage = 'https://resume.alejandromejia.co/social-media-cover.png'
-  const socialDescription = `Hey 👋🏻! I'm Alejandro, Product Developer with 8 years of experience making awesome UIs and improving UX`
+  const socialDescription = `Hey 👋🏻! I'm Alejandro, UX UI Developer with 8 years of experience making awesome UIs and improving UX`
   const socialUrl = 'https://resume.alejandromejia.co'
 
   return (

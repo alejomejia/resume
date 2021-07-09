@@ -73,6 +73,7 @@ const Float = () => {
         className="float__switch float__switch--theme"
         onClick={handleTheme}
         onMouseEnter={handleMouseEnter}
+        aria-label="Switch theme"
       >
         <Boop config={{ rotate: 48 }}>
           <Icon name={browserTheme === 'dark' ? 'moon' : 'sun'} width={24} />
@@ -82,6 +83,7 @@ const Float = () => {
         className="float__switch float__switch--sound"
         onClick={handleSounds}
         onMouseEnter={handleMouseEnter}
+        aria-label={isSoundEnable ? 'Turn off sounds' : 'Turn on sounds'}
       >
         <Boop config={{ rotate: 8 }}>
           <Icon name="volume" width={24} />
