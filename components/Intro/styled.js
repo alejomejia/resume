@@ -129,7 +129,7 @@ export const Component = styled.div`
 
       @keyframes scale {
         0% {
-          transform: scale(1);
+          transform: scale(1.1);
         }
         100% {
           transform: scale(1.2);
@@ -150,10 +150,10 @@ export const Component = styled.div`
         transform: translateY(60px) scale(1.3);
 
         & svg {
-          animation: test 30s linear infinite;
+          animation: spin 20s linear infinite;
         }
 
-        @keyframes test {
+        @keyframes spin {
           0% {
             transform: rotate(0);
           }
