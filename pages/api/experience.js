@@ -3,7 +3,7 @@ export default function handler(req, res) {
     {
       id: 1,
       image: '/experience/freelance.png',
-      title: 'Product Developer / Web Designer',
+      title: 'UX UI Developer / Web Designer',
       at: 'Freelance',
       link: '/',
       startDate: 'January 2013',
@@ -25,7 +25,7 @@ export default function handler(req, res) {
     {
       id: 3,
       image: '/experience/10pearls.png',
-      title: 'UI Developer',
+      title: 'UX UI Developer',
       at: '10Pearls',
       link: 'https://10pearls.com/',
       startDate: 'September 2019',
@@ -36,7 +36,7 @@ export default function handler(req, res) {
     {
       id: 4,
       image: '/experience/integro.png',
-      title: 'UI Developer',
+      title: 'UX UI Developer',
       at: 'Integ.ro',
       link: 'https://www.integ.ro/',
       startDate: 'July 2018',
