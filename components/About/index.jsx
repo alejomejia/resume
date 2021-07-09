@@ -42,15 +42,13 @@ const About = () => {
         </Heading>
         <div className="about__content">
           <p>
-            I’m a passionate <strong>Product Developer</strong> with 8 years of
-            experience coding awesome websites and app interfaces in different
-            digital agencies and software companies.
+            I’m a passionate, proactive, with keen eye for details,{' '}
+            <strong>Product Developer</strong> with 8 years of experience. My
+            pasion is to build and maintain <strong>Design Systems</strong> in{' '}
+            <strong>NextJS / ReactJS and Storybook</strong>, working together
+            with design and frontend teams.
           </p>
-          <p>
-            I like to learn all the time about new frontend technologies and UI
-            trends. In my free time, I like to play videogames, watch TV series
-            and movies, travel and ride in my motorcycle.
-          </p>
+          <p>In my free time I like to study 📚 and play videogames 👾.</p>
         </div>
         <Boop className="about__boop" config={{ y: -3 }}>
           <Button

@@ -92,6 +92,10 @@ export const Component = styled.article`
       &:hover {
         opacity: 1;
       }
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+        opacity: 1;
+      }
     }
 
     &__gradient,
