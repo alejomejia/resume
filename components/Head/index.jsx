@@ -1,20 +1,10 @@
-import { useState, useEffect } from 'react'
 import HTMLHead from 'next/head'
 import PropTypes from 'prop-types'
 
 const Head = ({ title }) => {
-  const [yearsOfExperience, setYearsOfExperience] = useState('')
-
-  useEffect(() => {
-    const currentYear = new Date().getFullYear()
-    const firstJobYear = 2013
-
-    setYearsOfExperience(currentYear - firstJobYear)
-  }, [])
-
   const socialTitle = 'Resume :: Alejandro Mejia'
   const socialImage = 'https://resume.alejandromejia.co/social-media-cover.png'
-  const socialDescription = `Hey 👋🏻! I'm Alejandro, Product Developer with ${yearsOfExperience} years of experience making awesome UIs and improving UX`
+  const socialDescription = `Hey 👋🏻! I'm Alejandro, Product Developer with 8 years of experience making awesome UIs and improving UX`
   const socialUrl = 'https://resume.alejandromejia.co'
 
   return (
