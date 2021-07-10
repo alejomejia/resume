@@ -55,7 +55,7 @@ export const Component = styled.section`
       margin-bottom: ${({ theme }) => theme.spacing(4)};
 
       @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-        margin-bottom: 0;
+        margin-bottom: ${({ theme }) => theme.spacing(3)};
       }
     }
   }
