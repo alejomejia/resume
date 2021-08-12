@@ -44,7 +44,7 @@ const About = () => {
           <p>
             I’m a passionate, proactive, with keen eye for details,{' '}
             <strong>UX UI Developer</strong> with 8 years of experience. My
-            pasion is to build and maintain <strong>Design Systems</strong> in{' '}
+            passion is to build and maintain <strong>Design Systems</strong> in{' '}
             <strong>NextJS / ReactJS and Storybook</strong>, working together
             with design and frontend teams.
           </p>
