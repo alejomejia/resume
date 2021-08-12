@@ -1,7 +1,5 @@
 // Handle Theme switch
-import { useContext } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { store } from '../context/store'
 
 import GlobalCSS from '../styles/global'
 import GENERAL from '../styles/themes/general'
