@@ -53,7 +53,7 @@ export default function handler(req, res) {
       startDate: 'September 2015',
       endDate: 'June 2018',
       description:
-        'My main task in this company was to make cool websites in WordPress using templates with code modifications. My job position here was about communication with the company clients, cleaning WordPress virus from client websites, hosting maintenance, design and web development, team and client capacitations, sending mailchimp campaigns and many other tasks.'
+        'My main task in this company was to make cool and goal centered websites in WordPress using templates with code modifications. My job position here was about communication with the company clients, cleaning WordPress virus from client websites, hosting maintenance, design and web development, team and client capacitations, sending mailchimp campaigns and many other tasks.'
     },
     {
       id: 6,
