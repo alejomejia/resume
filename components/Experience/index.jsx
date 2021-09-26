@@ -17,7 +17,7 @@ const Experience = ({}) => {
   return (
     <Component className="experience">
       <Heading as="h3" icon="briefcase" mb={theme.spacing(3)}>
-        Relevant Experience
+        Experience
       </Heading>
       {experience ? (
         experience.map((item) => (
