@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-import Icon from 'components/Icon'
 import { Component } from './styled'
 
 const RecommendationsItem = ({
@@ -17,11 +16,6 @@ const RecommendationsItem = ({
       <div className="recommendations-item__left">
         <div className="recommendations__picture">
           <Image src={image} alt={`${name} picture`} width="100" height="100" />
-        </div>
-        <div className="recommendations__rating">
-          {Array.from({ length: 5 }, (item, k) => (
-            <Icon key={k} name="star" width={16} />
-          ))}
         </div>
       </div>
       <div className="recommendations-item__right">

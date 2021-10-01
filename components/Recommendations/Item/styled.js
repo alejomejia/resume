@@ -27,12 +27,6 @@ export const Component = styled(Card)`
       margin-bottom: ${({ theme }) => theme.spacing(1)};
     }
 
-    &__rating {
-      display: flex;
-      justify-content: center;
-      margin-bottom: ${({ theme }) => theme.spacing(2)};
-    }
-
     &__heading {
       font-weight: ${({ theme }) => theme.fonts.weight.regular};
 
