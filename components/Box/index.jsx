@@ -2,7 +2,20 @@ import PropTypes from 'prop-types'
 
 import { Component } from './styled'
 
-const Box = ({ as, m, mt, ml, mb, mr, p, pt, pl, pb, pr, children }) => {
+const Box = ({
+  as = 'div',
+  m,
+  mt,
+  ml,
+  mb,
+  mr,
+  p,
+  pt,
+  pl,
+  pb,
+  pr,
+  children
+}) => {
   return (
     <Component
       as={as}
@@ -20,10 +33,6 @@ const Box = ({ as, m, mt, ml, mb, mr, p, pt, pl, pb, pr, children }) => {
       {children}
     </Component>
   )
-}
-
-Box.defaultProps = {
-  as: 'div'
 }
 
 Box.propTypes = {

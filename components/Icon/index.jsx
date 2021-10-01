@@ -42,7 +42,7 @@ export const SVG = {
   volume: IconVolume
 }
 
-const Icon = ({ name, width, fill }) => {
+const Icon = ({ name, width = 20, fill }) => {
   const IconRenderer = SVG[name]
 
   return (
@@ -50,10 +50,6 @@ const Icon = ({ name, width, fill }) => {
       <IconRenderer />
     </Component>
   )
-}
-
-Icon.defaultProps = {
-  width: 20
 }
 
 Icon.propTypes = {
