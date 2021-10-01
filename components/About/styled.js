@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Component = styled.section`
+export const Wrapper = styled.section`
   position: relative;
   margin-bottom: ${({ theme }) => theme.spacing(5)};
   background-color: var(--color-bg-accent);
@@ -19,44 +19,26 @@ export const Component = styled.section`
     background-color: var(--color-bg-accent);
     z-index: -1;
   }
+`
+export const Container = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
+  padding-top: ${({ theme }) => theme.spacing(10)};
+  padding-bottom: ${({ theme }) => theme.spacing(5)};
 
-  .about {
-    &__wrapper {
-      margin-bottom: ${({ theme }) => theme.spacing(6)};
-      padding-top: ${({ theme }) => theme.spacing(10)};
-      padding-bottom: ${({ theme }) => theme.spacing(5)};
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: ${({ theme }) => theme.spacing(4)};
+    margin-bottom: 0;
+  }
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-        padding: ${({ theme }) => theme.spacing(4)};
-        margin-bottom: 0;
-      }
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+    padding: ${({ theme }) => `${theme.spacing(3)} ${theme.spacing(2)}`};
+  }
+`
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
-        padding: ${({ theme }) => theme.spacing(3)}
-          ${({ theme }) => theme.spacing(2)};
+export const Content = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
 
-        h3.heading .heading__title {
-          font-size: ${({ theme }) => theme.fonts.size.l};
-        }
-      }
-
-      button {
-        @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-          display: none;
-        }
-      }
-    }
-
-    &__boop {
-      max-width: fit-content;
-    }
-
-    &__content {
-      margin-bottom: ${({ theme }) => theme.spacing(4)};
-
-      @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-        margin-bottom: ${({ theme }) => theme.spacing(3)};
-      }
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin-bottom: ${({ theme }) => theme.spacing(3)};
   }
 `

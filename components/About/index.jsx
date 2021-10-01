@@ -9,7 +9,7 @@ import Heading from 'components/Heading'
 import Boop from 'components/Boop'
 import Button from 'components/Button'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const About = () => {
   const theme = useContext(ThemeContext)
@@ -35,12 +35,12 @@ const About = () => {
   }
 
   return (
-    <Component className="about">
-      <div className="about__wrapper">
+    <S.Wrapper>
+      <S.Container>
         <Heading as="h3" icon="pencil" mb={theme.spacing(2)}>
           About Me
         </Heading>
-        <div className="about__content">
+        <S.Content>
           <p>
             I’m a passionate, proactive, detail-oriented,{' '}
             <strong>UX UI Developer</strong> with 8 years of experience. My
@@ -49,8 +49,8 @@ const About = () => {
             with design and frontend teams.
           </p>
           <p>In my free time I like to study 📚 and play videogames 👾.</p>
-        </div>
-        <Boop className="about__boop" config={{ y: -3 }}>
+        </S.Content>
+        <Boop config={{ y: -3 }}>
           <Button
             as="a"
             href="/resume-alejandro-mejia-ux-ui-dev.pdf"
@@ -62,8 +62,8 @@ const About = () => {
             Download in PDF
           </Button>
         </Boop>
-      </div>
-    </Component>
+      </S.Container>
+    </S.Wrapper>
   )
 }
 

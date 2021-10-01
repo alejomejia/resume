@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Wrapper as AboutWrapper } from '../About/styled'
 
 export const Component = styled.h1`
   display: flex;
@@ -20,6 +21,13 @@ export const Component = styled.h1`
       font-weight: ${(props) =>
         props.weight ? props.weight : props.theme.fonts.weight.bold};
       font-style: ${(props) => (props.isItalic ? 'italic' : '')};
+    }
+  }
+
+  // In specific sections
+  ${AboutWrapper} & .heading__title {
+    @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+      font-size: ${({ theme }) => theme.fonts.size.l};
     }
   }
 `
