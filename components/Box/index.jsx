@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-
-import { Component } from './styled'
+import * as S from './styled'
 
 const Box = ({
   as = 'div',
@@ -17,21 +16,21 @@ const Box = ({
   children
 }) => {
   return (
-    <Component
+    <S.Wrapper
       as={as}
-      m={m}
-      mt={mt}
-      mr={mr}
-      mb={mb}
-      ml={ml}
-      p={p}
-      pt={pt}
-      pr={pr}
-      pb={pb}
-      pl={pl}
+      $m={m}
+      $mt={mt}
+      $mr={mr}
+      $mb={mb}
+      $ml={ml}
+      $p={p}
+      $pt={pt}
+      $pr={pr}
+      $pb={pb}
+      $pl={pl}
     >
       {children}
-    </Component>
+    </S.Wrapper>
   )
 }
 
