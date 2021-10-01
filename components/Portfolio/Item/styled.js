@@ -21,7 +21,7 @@ export const Component = styled.article`
 
     &:hover {
       .portfolio__blur {
-        backdrop-filter: blur(0);
+        backdrop-filter: blur(4px);
       }
     }
   }
@@ -111,7 +111,7 @@ export const Component = styled.article`
 
     &__blur {
       z-index: 1;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(0);
       transition: backdrop-filter 0.35s ease;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
