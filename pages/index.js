@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <ThemeProvider theme={GENERAL}>
       <GlobalCSS />
-      <Head title="Resume :: Alejandro Mejia" />
+      <Head title="Resume :: Alejandro Mejía" />
       <Container>
         <Float />
         <PageGrid>
