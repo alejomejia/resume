@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
-
-import { Component } from './styled'
+import * as S from './styled'
 
 const Grid = ({ gap, columns, children }) => {
   return (
-    <Component gap={gap} columns={columns}>
+    <S.Wrapper $gap={gap} $columns={columns}>
       {children}
-    </Component>
+    </S.Wrapper>
   )
 }
 
