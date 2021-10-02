@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { Wrapper as AboutWrapper } from '../About/styled'
 import { Wrapper as EducationWrapper } from '../Education/styled'
+import { Wrapper as ExperienceWrapper } from '../Experience/styled'
 
 export const Component = styled.h1`
   display: flex;
@@ -28,7 +29,8 @@ export const Component = styled.h1`
 
   // In specific sections
   ${AboutWrapper} & .heading__title,
-  ${EducationWrapper} & .heading__title {
+  ${EducationWrapper} & .heading__title,
+  ${ExperienceWrapper} & .heading__title {
     @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
       font-size: ${({ theme }) => theme.fonts.size.l};
     }

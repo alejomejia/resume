@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const ExperienceItem = ({
   image,
@@ -13,37 +13,31 @@ const ExperienceItem = ({
   description
 }) => {
   return (
-    <Component className="experience-item">
-      <header className="experience-item__header">
-        <div className="experience-item__header-left">
+    <S.Wrapper>
+      <S.Header>
+        <S.HeaderLeft>
           <a href={link} target="_blank" rel="noreferrer">
             <Image src={image} alt={`${at} logo`} width="40" height="40" />
           </a>
-        </div>
-        <div className="experience-item__header-right">
-          <div className="experience-item__header-right-top">
-            <h4 className="experience__heading">
-              <span className="experience__title">{title}</span>
-              <a
-                className="experience__at"
-                href={link}
-                target="_blank"
-                rel="noreferrer"
-              >
+        </S.HeaderLeft>
+        <S.HeaderRight>
+          <div>
+            <S.Heading>
+              <S.Title>{title}</S.Title>
+              <S.At href={link} target="_blank" rel="noreferrer">
                 @{at}
-              </a>
-            </h4>
+              </S.At>
+            </S.Heading>
           </div>
-          <div className="experience-item__header-right-bottom">
-            <span className="experience__start-date">{startDate}</span> -{' '}
-            <span className="experience__end-date">{endDate}</span>
+          <div>
+            <S.Date>{startDate}</S.Date> - <S.Date>{endDate}</S.Date>
           </div>
-        </div>
-      </header>
-      <div className="experience__description">
+        </S.HeaderRight>
+      </S.Header>
+      <div>
         <p>{description}</p>
       </div>
-    </Component>
+    </S.Wrapper>
   )
 }
 
