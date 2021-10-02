@@ -7,16 +7,14 @@ import Flex from 'components/Flex'
 
 import Item from './Item'
 import Skeleton from './Skeleton'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Education = ({}) => {
   const theme = useContext(ThemeContext)
-  const { response } = useAxios('/education')
-
-  const education = response
+  const { response: education } = useAxios('/education')
 
   return (
-    <Component className="Education">
+    <S.Wrapper className="Education">
       <Heading as="h3" icon="academic" mb={theme.spacing(1.5)}>
         Education
       </Heading>
@@ -34,7 +32,7 @@ const Education = ({}) => {
           <Skeleton items={6} />
         )}
       </Flex>
-    </Component>
+    </S.Wrapper>
   )
 }
 

@@ -1,22 +1,17 @@
 import PropTypes from 'prop-types'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const EducationItem = ({ name, at, link }) => {
   return (
-    <Component className="education-item">
-      <span className="education__name">
+    <S.Wrapper>
+      <S.Name>
         {name}
-        <a
-          className="education__at"
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <S.Link href={link} target="_blank" rel="noreferrer">
           @{at}
-        </a>
-      </span>
-    </Component>
+        </S.Link>
+      </S.Name>
+    </S.Wrapper>
   )
 }
 
