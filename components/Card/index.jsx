@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const Card = ({ mb, children, ...rest }) => {
   return (
-    <Component mb={mb} {...rest}>
+    <S.Wrapper $mb={mb} {...rest}>
       {children}
-    </Component>
+    </S.Wrapper>
   )
 }
 
