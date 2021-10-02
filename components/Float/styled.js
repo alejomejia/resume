@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   position: fixed;
   top: 36px;
   right: 36px;
@@ -20,12 +20,10 @@ export const Component = styled.div`
     bottom: ${({ theme }) => theme.spacing(3)};
     right: ${({ theme }) => theme.spacing(3)};
   }
+`
 
-  .float {
-    &__switch {
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-  }
+export const Button = styled.button`
+  cursor: pointer;
+  background: none;
+  border: none;
 `
