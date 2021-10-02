@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Flex = ({ as, gap, align, justify, direction, wrap, children }) => {
   return (
-    <Component
+    <S.Wrapper
       as={as}
-      gap={gap}
-      align={align}
-      justify={justify}
-      direction={direction}
-      wrap={wrap}
+      $gap={gap}
+      $align={align}
+      $justify={justify}
+      $direction={direction}
+      $wrap={wrap}
     >
       {children}
-    </Component>
+    </S.Wrapper>
   )
 }
 
