@@ -2,7 +2,7 @@ import HTMLHead from 'next/head'
 import PropTypes from 'prop-types'
 
 const Head = ({ title }) => {
-  const socialTitle = 'Resume :: Alejandro Mejia'
+  const socialTitle = 'Resume :: Alejandro Mejía'
   const socialImage = 'https://resume.alejandromejia.co/social-media-cover.png'
   const socialDescription = `Hey 👋🏻! I'm Alejandro, UX UI Developer with 8 years of experience making awesome UIs and improving UX`
   const socialUrl = 'https://resume.alejandromejia.co'
@@ -10,7 +10,7 @@ const Head = ({ title }) => {
   return (
     <HTMLHead>
       <title>{title}</title>
-      <meta name="description" content="Alejandro Mejia's resume" />
+      <meta name="description" content="Alejandro Mejía's resume" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 

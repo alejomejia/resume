@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 import Icon, { SVG as iconNames } from '../Icon'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Heading = ({
   as,
@@ -17,24 +17,22 @@ const Heading = ({
   ...rest
 }) => {
   return (
-    <Component
-      className="heading"
-      as={as}
-      size={size}
-      family={family}
-      weight={weight}
-      color={color}
-      mb={mb}
-      isItalic={isItalic}
-      {...rest}
-    >
+    <S.Wrapper as={as} $mb={mb} {...rest}>
       {icon && (
-        <span className="heading__icon">
+        <S.IconWrapper>
           <Icon name={icon} width={iconSize} />
-        </span>
+        </S.IconWrapper>
       )}
-      <span className="heading__title">{children}</span>
-    </Component>
+      <S.Title
+        $color={color}
+        $size={size}
+        $family={family}
+        $weight={weight}
+        $isItalic={isItalic}
+      >
+        {children}
+      </S.Title>
+    </S.Wrapper>
   )
 }
 

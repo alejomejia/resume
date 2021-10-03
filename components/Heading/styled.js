@@ -1,36 +1,24 @@
 import styled from 'styled-components'
 
-import { Wrapper as AboutWrapper } from '../About/styled'
-import { Wrapper as EducationWrapper } from '../Education/styled'
-import { Wrapper as ExperienceWrapper } from '../Experience/styled'
-
-export const Component = styled.h1`
+export const Wrapper = styled.h1`
   display: flex;
   align-items: center;
-  margin-bottom: ${(props) => props.mb};
+  margin-bottom: ${(p) => p.$mb};
+`
 
-  .heading {
-    &__icon {
-      display: inline-flex;
-      margin-right: ${({ theme }) => theme.spacing(1)};
-    }
+export const IconWrapper = styled.span`
+  display: inline-flex;
+  margin-right: ${({ theme }) => theme.spacing(1)};
+`
 
-    &__title {
-      color: ${(props) =>
-        props.color ? props.color : 'var(--color-text-300)'};
-      font-size: ${(props) =>
-        props.size ? props.size : props.theme.fonts.size.xl};
-      font-family: ${({ theme, family }) => theme.fonts.family[family]};
-      font-weight: ${(props) =>
-        props.weight ? props.weight : props.theme.fonts.weight.bold};
-      font-style: ${(props) => (props.isItalic ? 'italic' : '')};
-    }
-  }
+export const Title = styled.span`
+  color: ${(p) => (p.$color ? p.$color : 'var(--color-text-300)')};
+  font-size: ${(p) => (p.$size ? p.$size : p.theme.fonts.size.xl)};
+  font-family: ${({ theme, family }) => theme.fonts.family[family]};
+  font-weight: ${(p) => (p.$weight ? p.$weight : p.theme.fonts.weight.bold)};
+  font-style: ${(p) => (p.$isItalic ? 'italic' : '')};
 
-  // In specific sections
-  ${AboutWrapper} & .heading__title,
-  ${EducationWrapper} & .heading__title,
-  ${ExperienceWrapper} & .heading__title {
+  h3${Wrapper} & {
     @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
       font-size: ${({ theme }) => theme.fonts.size.l};
     }
