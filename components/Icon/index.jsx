@@ -13,10 +13,10 @@ import IconGlobe from './icons/globe'
 import IconLinkedIn from './icons/linkedin'
 import IconMail from './icons/mail'
 import IconMoon from './icons/moon'
-import IconPencil from './icons/pencil'
 import IconSpeaker from './icons/speaker'
 import IconStorybook from './icons/storybook'
 import IconSun from './icons/sun'
+import IconUser from './icons/user'
 import IconVolume from './icons/volume'
 
 import { Component } from './styled'
@@ -35,10 +35,10 @@ export const SVG = {
   linkedin: IconLinkedIn,
   mail: IconMail,
   moon: IconMoon,
-  pencil: IconPencil,
   speaker: IconSpeaker,
   storybook: IconStorybook,
   sun: IconSun,
+  user: IconUser,
   volume: IconVolume
 }
 

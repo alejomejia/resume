@@ -37,7 +37,7 @@ const About = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <Heading as="h3" icon="pencil" mb={theme.spacing(2)}>
+        <Heading as="h3" icon="user" mb={theme.spacing(2)}>
           About Me
         </Heading>
         <S.Content>
