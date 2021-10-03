@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const PageGrid = ({ children }) => {
-  return <Component>{children}</Component>
+  return <S.Wrapper>{children}</S.Wrapper>
 }
 
 PageGrid.propTypes = {
