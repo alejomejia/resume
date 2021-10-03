@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const Component = styled.span`
-  display: grid;
+export const Wrapper = styled.span`
+  display: inline-flex;
 
   svg {
-    fill: ${(props) => (props.fill ? props.fill : 'var(--color-text-100)')};
-    width: ${(props) => props.width}px;
+    fill: ${(p) => p.$fill || 'var(--color-text-100)'};
+    width: ${(p) => p.$width}px;
   }
 `

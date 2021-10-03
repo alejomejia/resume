@@ -19,7 +19,7 @@ import IconSun from './icons/sun'
 import IconUser from './icons/user'
 import IconVolume from './icons/volume'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 export const SVG = {
   academic: IconAcademic,
@@ -46,9 +46,9 @@ const Icon = ({ name, width = 20, fill }) => {
   const IconRenderer = SVG[name]
 
   return (
-    <Component width={width} fill={fill}>
+    <S.Wrapper $width={width} $fill={fill}>
       <IconRenderer />
-    </Component>
+    </S.Wrapper>
   )
 }
 
