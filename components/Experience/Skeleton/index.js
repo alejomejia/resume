@@ -1,5 +1,5 @@
-import Flex from '../../Flex'
-import Skeleton from '../../Skeleton'
+import Flex from 'components/Flex'
+import Skeleton from 'components/Skeleton'
 
 const SkeletonExperience = () => {
   return (

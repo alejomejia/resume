@@ -4,7 +4,7 @@ import useSound from 'use-sound'
 import { store } from 'context/store'
 import * as gtag from 'lib/gtag'
 
-import Boop from '../Boop'
+import Boop from 'components/Boop'
 import * as S from './styled'
 
 const Footer = () => {

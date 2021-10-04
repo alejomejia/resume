@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Icon, { SVG as iconNames } from '../Icon'
+import Icon, { SVG as iconNames } from 'components/Icon'
 import * as S from './styled'
 
 const Heading = ({

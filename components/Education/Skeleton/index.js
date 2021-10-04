@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import Skeleton from '../../Skeleton'
+import Skeleton from 'components/Skeleton'
 
 const SkeletonEducation = ({ items }) => {
   const [itemsWidth, setItemsWidth] = useState([])
