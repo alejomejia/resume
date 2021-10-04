@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const Component = styled.div`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+export const Wrapper = styled.div`
+  width: ${(p) => p.$width};
+  height: ${(p) => p.$height};
   background-color: var(--color-skeleton);
   border-radius: 4px;
   will-change: opacity;
