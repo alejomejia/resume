@@ -8,7 +8,7 @@ import Flex from 'components/Flex'
 import Tag from 'components/Tag'
 
 import Skeleton from './Skeleton'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Skills = ({}) => {
   const theme = useContext(ThemeContext)
@@ -18,7 +18,7 @@ const Skills = ({}) => {
   const softSkills = response && response[1].skills
 
   return (
-    <Component className="skills">
+    <S.Wrapper className="skills">
       <Heading as="h3" icon="badge" mb={theme.spacing(1.5)}>
         Skills
       </Heading>
@@ -58,7 +58,7 @@ const Skills = ({}) => {
           )}
         </Flex>
       </Box>
-    </Component>
+    </S.Wrapper>
   )
 }
 

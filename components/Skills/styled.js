@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Title } from 'components/Heading/styled'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(6)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
