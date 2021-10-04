@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Card from 'components/Card'
 
-export const Component = styled(Card)`
+export const Wrapper = styled(Card)`
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: ${({ theme }) => theme.spacing(2)};
@@ -10,57 +10,52 @@ export const Component = styled(Card)`
     grid-template-columns: 100%;
     gap: 0;
   }
+`
 
-  .recommendations {
-    &-item {
-      &__left {
-        @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    }
+export const Left = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`
 
-    &__picture {
-      display: flex;
-      margin-bottom: ${({ theme }) => theme.spacing(1)};
-    }
+export const ImageWrapper = styled.div`
+  display: flex;
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
+`
 
-    &__heading {
-      font-weight: ${({ theme }) => theme.fonts.weight.regular};
+export const Right = styled.div``
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-        text-align: center;
-      }
-    }
+export const Heading = styled.h4`
+  font-weight: ${({ theme }) => theme.fonts.weight.regular};
 
-    &__name {
-      display: inline-block;
-      color: var(--color-text-200);
-      margin-right: ${({ theme }) => theme.spacing(0.5)};
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    text-align: center;
+  }
+`
 
-    &__company {
-      color: var(--color-primary);
-    }
+export const Name = styled.span`
+  display: inline-block;
+  color: var(--color-text-200);
+  margin-right: ${({ theme }) => theme.spacing(0.5)};
+`
 
-    &__title {
-      display: inline-block;
-      color: var(--color-text-100);
-      font-size: ${({ theme }) => theme.fonts.size.sm};
-      font-family: ${({ theme }) => theme.fonts.family.primary};
-      font-style: italic;
-      margin-bottom: ${({ theme }) => theme.spacing(2)};
+export const Company = styled.a`
+  color: var(--color-primary);
+`
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-        display: flex;
-        justify-content: center;
-        margin-top: 4px;
-      }
-    }
+export const JobTitle = styled.span`
+  display: inline-block;
+  color: var(--color-text-100);
+  font-size: ${({ theme }) => theme.fonts.size.sm};
+  font-family: ${({ theme }) => theme.fonts.family.primary};
+  font-style: italic;
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
 
-    &__description {
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
   }
 `
