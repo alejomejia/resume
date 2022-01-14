@@ -32,24 +32,16 @@ export default function handler(req, res) {
           name: 'Typescript'
         },
         {
-          id: 8,
-          name: 'TailwindCSS'
-        },
-        {
           id: 9,
           name: 'Styled Components'
         },
         {
           id: 10,
-          name: 'SASS'
+          name: 'Framer Motion'
         },
         {
           id: 11,
           name: 'React Spring'
-        },
-        {
-          id: 12,
-          name: 'Prop Types'
         },
         {
           id: 13,
@@ -78,14 +70,6 @@ export default function handler(req, res) {
         {
           id: 19,
           name: 'Figma'
-        },
-        {
-          id: 20,
-          name: 'Sketch'
-        },
-        {
-          id: 21,
-          name: 'Adobe XD'
         }
       ]
     },
