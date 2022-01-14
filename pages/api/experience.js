@@ -12,15 +12,26 @@ export default function handler(req, res) {
         'I help companies and startups to develop and maintain websites and design systems and their components in ReactJS and Storybook. Normally help to build the application layouts as well to make it responsive, and improve UX from UI development. In some cases I also do design job to help my clients build the entire product.'
     },
     {
+      id: 5,
+      image: '/experience/le-polish-bureau.png',
+      title: 'Frontend Developer',
+      at: 'LePolishBureau',
+      link: 'https://lepolishbureau.com/',
+      startDate: 'November 2021',
+      endDate: 'Today',
+      description:
+        'Working for a Polish company building amazing award winning websites and applications. I help to build the frontend components using React, StoryBook and Framer Motion for interactions.'
+    },
+    {
       id: 2,
       image: '/experience/making-sense.png',
       title: 'SSR UX Developer',
       at: 'MakingSense',
       link: 'https://makingsense.com/',
       startDate: 'January 2021',
-      endDate: 'Today',
+      endDate: 'October 2021',
       description:
-        'Working 100% remotely with an Argentinian and USA team on a huge app for agricultural sector. Some of my duties are to maintain an entire Design System built with ReactJS and Storybook, add new components based on designs, refactor old code moving from JS classes to hooks and Typescript, SASS to Styled Components and improve responsive.'
+        'Worked 100% remotely with an Argentinian and USA team on a huge app for agricultural sector. Some of my duties are to maintain an entire Design System built with ReactJS and Storybook, add new components based on designs, refactor old code moving from JS classes to hooks and Typescript, SASS to Styled Components and improve responsive.'
     },
     {
       id: 3,
