@@ -43,10 +43,11 @@ const About = () => {
         <div className="about__content">
           <p>
             I’m a passionate, proactive, with keen eye for details,{' '}
-            <strong>UX UI Developer</strong> with 8 years of experience. My
-            pasion is to build and maintain <strong>Design Systems</strong> in{' '}
+            <strong>Frontend Developer</strong> focused on UI UX and
+            interactions with 8 years of experience. My passion is to build and
+            maintain <strong>websites and applications</strong> in{' '}
             <strong>NextJS / ReactJS and Storybook</strong>, working together
-            with design and frontend teams.
+            with design and development teams.
           </p>
           <p>In my free time I like to study 📚 and play videogames 👾.</p>
         </div>
