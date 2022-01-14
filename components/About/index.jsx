@@ -54,7 +54,7 @@ const About = () => {
         <Boop className="about__boop" config={{ y: -3 }}>
           <Button
             as="a"
-            href="/resume-alejandro-mejia-ux-ui-dev.pdf"
+            href="/resume-alejandro-mejia-frontend.pdf"
             icon="arrow"
             onClick={handleOnClick}
             onMouseEnter={handleOnEnter}
