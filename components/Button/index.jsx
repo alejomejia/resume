@@ -1,19 +1,18 @@
 import PropTypes from 'prop-types'
+import Icon, { SVG as iconNames } from 'components/Icon'
 
-import Icon, { SVG as iconNames } from '../Icon'
-
-import { Component } from './styled'
+import * as S from './styled'
 
 const Button = ({ as, icon, iconSize, children, ...rest }) => {
   return (
-    <Component className="button" as={as} {...rest}>
-      <span className="button__text">{children}</span>
+    <S.Wrapper as={as} {...rest}>
+      <S.Text>{children}</S.Text>
       {icon && (
-        <span className="button__icon">
+        <S.IconWrapper>
           <Icon name={icon} width={iconSize} />
-        </span>
+        </S.IconWrapper>
       )}
-    </Component>
+    </S.Wrapper>
   )
 }
 

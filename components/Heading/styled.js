@@ -1,25 +1,31 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Component = styled.h1`
+export const Wrapper = styled.h1`
   display: flex;
   align-items: center;
-  margin-bottom: ${(props) => props.mb};
+  margin-bottom: ${(p) => p.$mb};
+`
 
-  .heading {
-    &__icon {
-      display: inline-flex;
-      margin-right: ${({ theme }) => theme.spacing(1)};
-    }
+export const IconWrapper = styled.span`
+  display: inline-flex;
+  margin-right: ${({ theme }) => theme.spacing(1)};
+`
 
-    &__title {
-      color: ${(props) =>
-        props.color ? props.color : 'var(--color-text-300)'};
-      font-size: ${(props) =>
-        props.size ? props.size : props.theme.fonts.size.xl};
-      font-family: ${({ theme, family }) => theme.fonts.family[family]};
-      font-weight: ${(props) =>
-        props.weight ? props.weight : props.theme.fonts.weight.bold};
-      font-style: ${(props) => (props.isItalic ? 'italic' : '')};
+export const Title = styled.span`
+  color: ${(p) => p.$color || 'var(--color-text-300)'};
+  font-size: ${(p) => p.$size || p.theme.fonts.size.xl};
+  font-family: ${({ theme, family }) => theme.fonts.family[family]};
+  font-weight: ${(p) => p.$weight || p.theme.fonts.weight.bold};
+
+  ${(p) =>
+    p.$isItalic &&
+    css`
+      font-style: italic;
+    `}
+
+  h3${Wrapper} & {
+    @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
+      font-size: ${({ theme }) => theme.fonts.size.l};
     }
   }
 `

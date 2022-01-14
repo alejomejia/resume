@@ -8,7 +8,7 @@ import * as gtag from 'lib/gtag'
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const PortfolioItem = ({ title, stack, image, external }) => {
   const combinedStack = stack.join(', ')
@@ -41,27 +41,26 @@ const PortfolioItem = ({ title, stack, image, external }) => {
     gtag.event({ action: `portfolio_${icon}`, category: 'portfolio' })
   }
 
-  return (
-    <Component className="portfolio-item" image={image}>
-      <div className="portfolio-item__container">
-        <div className="portfolio__content">
-          <h4 className="portfolio__title">{title}</h4>
-          <span className="portfolio__stack">{combinedStack}</span>
-        </div>
-        <div className="portfolio-item__buttons">
-          {external.map((item) => {
-            const buttonIcons = {
-              repo: 'code',
-              site: 'globe',
-              storybook: 'storybook'
-            }
+  const buttonIcons = {
+    repo: 'code',
+    site: 'globe',
+    storybook: 'storybook'
+  }
 
+  return (
+    <S.Wrapper $image={image}>
+      <S.Container>
+        <S.Content>
+          <S.Title>{title}</S.Title>
+          <S.Stack>{combinedStack}</S.Stack>
+        </S.Content>
+        <S.ButtonsWrapper>
+          {external.map((item) => {
             const iconName = buttonIcons[item.type]
 
             return (
               <Boop key={item.id} config={{ scale: 0.95 }}>
-                <a
-                  className="portfolio__button"
+                <S.Button
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
@@ -70,15 +69,15 @@ const PortfolioItem = ({ title, stack, image, external }) => {
                   data-type={iconName}
                 >
                   <Icon name={iconName} width={24} />
-                </a>
+                </S.Button>
               </Boop>
             )
           })}
-        </div>
-      </div>
-      <div className="portfolio__gradient"></div>
-      <div className="portfolio__blur"></div>
-    </Component>
+        </S.ButtonsWrapper>
+      </S.Container>
+      <S.Gradient />
+      <S.Blur />
+    </S.Wrapper>
   )
 }
 

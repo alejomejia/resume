@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { StoreProvider } from '../context/store'
+import { StoreProvider } from 'context/store'
 import { ThemeProvider } from 'next-themes'
-import * as gtag from '../lib/gtag'
+import * as gtag from 'lib/gtag'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

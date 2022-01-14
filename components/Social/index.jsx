@@ -10,7 +10,7 @@ import Flex from 'components/Flex'
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
 
-import { Component, Link } from './styled'
+import * as S from './styled'
 
 const Social = ({}) => {
   const theme = useContext(ThemeContext)
@@ -37,12 +37,12 @@ const Social = ({}) => {
   }
 
   return (
-    <Component className="social">
+    <S.Wrapper className="social">
       <Heading as="h3" icon="speaker" mb={theme.spacing(1.5)}>
         Social
       </Heading>
       <Flex wrap="wrap" gap={theme.spacing(1)}>
-        <Link
+        <S.Link
           href="https://www.linkedin.com/in/alejandromejiac/"
           target="_blank"
           rel="noreferrer"
@@ -53,8 +53,8 @@ const Social = ({}) => {
           <Boop config={{ y: -3 }}>
             <Icon name="linkedin" width={32} />
           </Boop>
-        </Link>
-        <Link
+        </S.Link>
+        <S.Link
           href="https://github.com/alejomejia"
           target="_blank"
           rel="noreferrer"
@@ -65,9 +65,9 @@ const Social = ({}) => {
           <Boop config={{ y: -3 }}>
             <Icon name="github" width={32} />
           </Boop>
-        </Link>
+        </S.Link>
       </Flex>
-    </Component>
+    </S.Wrapper>
   )
 }
 

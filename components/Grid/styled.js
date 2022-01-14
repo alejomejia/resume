@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   display: grid;
-  gap: ${(props) => props.gap};
-  grid-template-columns: ${(props) => props.columns};
+  gap: ${(p) => p.$gap};
+  grid-template-columns: ${(p) => p.$columns};
 `

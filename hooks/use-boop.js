@@ -33,7 +33,7 @@ const useBoop = ({
   }, [])
 
   const style = useSpring({
-    display: 'flex',
+    display: 'inline-flex',
     backfaceVisibility: 'hidden',
     willChange: 'transform',
     transform: isBooped

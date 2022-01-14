@@ -1,12 +1,13 @@
 import * as gtag from 'lib/gtag'
 
+import Flex from 'components/Flex'
 import Icon from 'components/Icon'
 
 import Hello from './Hello'
 import ArtCenter from './Art/Center'
 import ArtSpinner from './Art/Spinner'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const Intro = () => {
   const gtagEventEmail = () => {
@@ -14,39 +15,36 @@ const Intro = () => {
   }
 
   return (
-    <Component className="intro">
-      <div className="content">
-        <span className="content__hello">
+    <S.Wrapper>
+      <S.Content>
+        <S.HelloWrapper>
           <Hello />
-        </span>
-        <span className="content__preffix">My name is</span>
-        <h1 className="content__name">Alejandro Mejia</h1>
-        <h2 className="content__job-title">Frontend Developer</h2>
-        <span className="content__location">From Medellin, CO 🇨🇴</span>
-        <div className="content__contact">
-          <a
-            className="content__contact-link"
+        </S.HelloWrapper>
+        <S.Preffix>My name is</S.Preffix>
+        <S.Name>Alejandro Mejía</S.Name>
+        <S.JobTitle>Frontend Developer</S.JobTitle>
+        <S.Location>From Medellin, CO 🇨🇴</S.Location>
+        <div>
+          <S.Link
             href="mailto:alejomejiacuartas@outlook.com"
             onClick={gtagEventEmail}
           >
-            <span className="content__icon">
+            <Flex>
               <Icon name="mail" fill="#fff" />
-            </span>
-            <span className="content__email">
-              alejomejiacuartas@outlook.com
-            </span>
-          </a>
+            </Flex>
+            <S.Email>alejomejiacuartas@outlook.com</S.Email>
+          </S.Link>
         </div>
-      </div>
-      <div className="art">
-        <div className="art__figure-1">
+      </S.Content>
+      <S.Art>
+        <S.Art1>
           <ArtCenter />
-        </div>
-        <div className="art__figure-2">
+        </S.Art1>
+        <S.Art2>
           <ArtSpinner />
-        </div>
-      </div>
-    </Component>
+        </S.Art2>
+      </S.Art>
+    </S.Wrapper>
   )
 }
 

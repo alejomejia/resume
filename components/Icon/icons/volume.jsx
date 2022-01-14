@@ -9,6 +9,7 @@ const IconVolume = () => {
     opacity: isSoundEnable ? 1 : 0,
     delay: isSoundEnable ? 0 : 150
   })
+
   const outside = useSpring({
     opacity: isSoundEnable ? 1 : 0,
     delay: isSoundEnable ? 150 : 0

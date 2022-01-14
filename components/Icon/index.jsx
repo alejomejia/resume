@@ -13,14 +13,13 @@ import IconGlobe from './icons/globe'
 import IconLinkedIn from './icons/linkedin'
 import IconMail from './icons/mail'
 import IconMoon from './icons/moon'
-import IconPencil from './icons/pencil'
 import IconSpeaker from './icons/speaker'
-import IconStar from './icons/star'
 import IconStorybook from './icons/storybook'
 import IconSun from './icons/sun'
+import IconUser from './icons/user'
 import IconVolume from './icons/volume'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 export const SVG = {
   academic: IconAcademic,
@@ -36,26 +35,21 @@ export const SVG = {
   linkedin: IconLinkedIn,
   mail: IconMail,
   moon: IconMoon,
-  pencil: IconPencil,
   speaker: IconSpeaker,
-  star: IconStar,
   storybook: IconStorybook,
   sun: IconSun,
+  user: IconUser,
   volume: IconVolume
 }
 
-const Icon = ({ name, width, fill }) => {
+const Icon = ({ name, width = 20, fill }) => {
   const IconRenderer = SVG[name]
 
   return (
-    <Component width={width} fill={fill}>
+    <S.Wrapper $width={width} $fill={fill}>
       <IconRenderer />
-    </Component>
+    </S.Wrapper>
   )
-}
-
-Icon.defaultProps = {
-  width: 20
 }
 
 Icon.propTypes = {

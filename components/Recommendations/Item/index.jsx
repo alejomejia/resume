@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-import Icon from 'components/Icon'
-import { Component } from './styled'
+import * as S from './styled'
 
 const RecommendationsItem = ({
   image,
@@ -13,35 +12,25 @@ const RecommendationsItem = ({
   description
 }) => {
   return (
-    <Component className="recommendations-item">
-      <div className="recommendations-item__left">
-        <div className="recommendations__picture">
+    <S.Wrapper>
+      <S.Left>
+        <S.ImageWrapper>
           <Image src={image} alt={`${name} picture`} width="100" height="100" />
-        </div>
-        <div className="recommendations__rating">
-          {Array.from({ length: 5 }, (item, k) => (
-            <Icon key={k} name="star" width={16} />
-          ))}
-        </div>
-      </div>
-      <div className="recommendations-item__right">
-        <h4 className="recommendations__heading">
-          <span className="recommendations__name">{name}</span>
-          <a
-            className="recommendations__company"
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-          >
+        </S.ImageWrapper>
+      </S.Left>
+      <S.Right>
+        <S.Heading>
+          <S.Name>{name}</S.Name>
+          <S.Company href={link} target="_blank" rel="noreferrer">
             @{company}
-          </a>
-        </h4>
-        <span className="recommendations__title">{title}</span>
-        <div className="recommendations__description">
+          </S.Company>
+        </S.Heading>
+        <S.JobTitle>{title}</S.JobTitle>
+        <div>
           <p>{description}</p>
         </div>
-      </div>
-    </Component>
+      </S.Right>
+    </S.Wrapper>
   )
 }
 

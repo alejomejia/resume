@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   position: relative;
   max-width: 1440px;
   margin: 0 auto;

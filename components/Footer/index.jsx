@@ -4,8 +4,8 @@ import useSound from 'use-sound'
 import { store } from 'context/store'
 import * as gtag from 'lib/gtag'
 
-import Boop from '../Boop'
-import { Component } from './styled'
+import Boop from 'components/Boop'
+import * as S from './styled'
 
 const Footer = () => {
   const { isSoundEnable } = useContext(store)
@@ -33,12 +33,12 @@ const Footer = () => {
   }
 
   return (
-    <Component className="footer">
-      <div className="footer__top">
-        <span className="footer__text">
+    <S.Wrapper className="footer">
+      <S.FooterTop className="footer__top">
+        <S.Text className="footer__text">
           Not convinced yet?{' '}
           <Boop config={{ y: -3 }}>
-            <a
+            <S.Link
               className="footer__link"
               href={whatsappLink}
               target="_blank"
@@ -47,16 +47,16 @@ const Footer = () => {
               onClick={handleOnClick}
             >
               Let&apos;s talk ⚡
-            </a>{' '}
+            </S.Link>{' '}
           </Boop>
-        </span>
-      </div>
-      <div className="footer__bottom">
+        </S.Text>
+      </S.FooterTop>
+      <S.FooterBottom>
         <span>
           Designed in Figma, built with NextJS and Styled Components 💙
         </span>
-      </div>
-    </Component>
+      </S.FooterBottom>
+    </S.Wrapper>
   )
 }
 

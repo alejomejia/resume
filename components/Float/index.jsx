@@ -8,7 +8,7 @@ import * as gtag from 'lib/gtag'
 import Icon from 'components/Icon'
 import Boop from 'components/Boop'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const Float = () => {
   const { theme, systemTheme, setTheme } = useTheme()
@@ -63,14 +63,11 @@ const Float = () => {
     gtag.event({ action: 'theme_trigger', category: 'widgets' })
   }
 
-  const handleMouseEnter = () => {
-    popEnter()
-  }
+  const handleMouseEnter = () => popEnter()
 
   return (
-    <Component className="float">
-      <button
-        className="float__switch float__switch--theme"
+    <S.Wrapper>
+      <S.Button
         onClick={handleTheme}
         onMouseEnter={handleMouseEnter}
         aria-label="Switch theme"
@@ -78,9 +75,8 @@ const Float = () => {
         <Boop config={{ rotate: 48 }}>
           <Icon name={browserTheme === 'dark' ? 'moon' : 'sun'} width={24} />
         </Boop>
-      </button>
-      <button
-        className="float__switch float__switch--sound"
+      </S.Button>
+      <S.Button
         onClick={handleSounds}
         onMouseEnter={handleMouseEnter}
         aria-label={isSoundEnable ? 'Turn off sounds' : 'Turn on sounds'}
@@ -88,8 +84,8 @@ const Float = () => {
         <Boop config={{ rotate: 8 }}>
           <Icon name="volume" width={24} />
         </Boop>
-      </button>
-    </Component>
+      </S.Button>
+    </S.Wrapper>
   )
 }
 

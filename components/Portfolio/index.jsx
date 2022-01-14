@@ -6,20 +6,18 @@ import Heading from 'components/Heading'
 
 import Item from './Item'
 import Skeleton from './Skeleton'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Portfolio = () => {
   const theme = useContext(ThemeContext)
-  const { response } = useAxios('/portfolio')
-
-  const portfolio = response
+  const { response: portfolio } = useAxios('/portfolio')
 
   return (
-    <Component className="portfolio">
+    <S.Wrapper>
       <Heading as="h3" icon="fire" mb={theme.spacing(3)}>
         Portfolio
       </Heading>
-      <div className="portfolio__grid">
+      <S.Grid>
         {portfolio ? (
           portfolio.map((item) => (
             <Item
@@ -33,8 +31,8 @@ const Portfolio = () => {
         ) : (
           <Skeleton />
         )}
-      </div>
-    </Component>
+      </S.Grid>
+    </S.Wrapper>
   )
 }
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Title } from 'components/Heading/styled'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(6)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -15,13 +16,7 @@ export const Component = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing(3)};
   }
 
-  h3.heading .heading__title {
-    @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
-      font-size: ${({ theme }) => theme.fonts.size.l};
-    }
-  }
-
-  h4.heading .heading__title {
+  & h4 ${Title} {
     color: var(--color-text-200);
 
     @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {

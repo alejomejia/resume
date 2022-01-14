@@ -40,6 +40,10 @@ export default function handler(req, res) {
           name: 'Framer Motion'
         },
         {
+          id: 22,
+          name: 'Jest'
+        },
+        {
           id: 11,
           name: 'React Spring'
         },
@@ -50,6 +54,14 @@ export default function handler(req, res) {
         {
           id: 14,
           name: 'Github'
+        },
+        {
+          id: 23,
+          name: 'MERN'
+        },
+        {
+          id: 24,
+          name: 'API REST'
         },
         {
           id: 15,

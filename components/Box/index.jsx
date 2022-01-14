@@ -1,29 +1,37 @@
 import PropTypes from 'prop-types'
+import * as S from './styled'
 
-import { Component } from './styled'
-
-const Box = ({ as, m, mt, ml, mb, mr, p, pt, pl, pb, pr, children }) => {
+const Box = ({
+  as = 'div',
+  m,
+  mt,
+  ml,
+  mb,
+  mr,
+  p,
+  pt,
+  pl,
+  pb,
+  pr,
+  children
+}) => {
   return (
-    <Component
+    <S.Wrapper
       as={as}
-      m={m}
-      mt={mt}
-      mr={mr}
-      mb={mb}
-      ml={ml}
-      p={p}
-      pt={pt}
-      pr={pr}
-      pb={pb}
-      pl={pl}
+      $m={m}
+      $mt={mt}
+      $mr={mr}
+      $mb={mb}
+      $ml={ml}
+      $p={p}
+      $pt={pt}
+      $pr={pr}
+      $pb={pb}
+      $pl={pl}
     >
       {children}
-    </Component>
+    </S.Wrapper>
   )
-}
-
-Box.defaultProps = {
-  as: 'div'
 }
 
 Box.propTypes = {

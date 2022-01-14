@@ -6,18 +6,16 @@ import Heading from 'components/Heading'
 
 import Item from './Item'
 import Skeleton from './Skeleton'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Experience = ({}) => {
   const theme = useContext(ThemeContext)
-  const { response } = useAxios('/experience')
-
-  const experience = response
+  const { response: experience } = useAxios('/experience')
 
   return (
-    <Component className="experience">
+    <S.Wrapper className="experience">
       <Heading as="h3" icon="briefcase" mb={theme.spacing(3)}>
-        Relevant Experience
+        Experience
       </Heading>
       {experience ? (
         experience.map((item) => (
@@ -35,7 +33,7 @@ const Experience = ({}) => {
       ) : (
         <Skeleton />
       )}
-    </Component>
+    </S.Wrapper>
   )
 }
 

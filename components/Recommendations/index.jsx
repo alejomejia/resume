@@ -6,16 +6,14 @@ import Heading from 'components/Heading'
 
 import Item from './Item'
 import Skeleton from './Skeleton'
-import { Component } from './styled'
+import * as S from './styled'
 
 const Recommendations = () => {
   const theme = useContext(ThemeContext)
-  const { response } = useAxios('/recommendations')
-
-  const recommendations = response
+  const { response: recommendations } = useAxios('/recommendations')
 
   return (
-    <Component className="recommendations">
+    <S.Wrapper>
       <Heading as="h3" icon="bolt" mb={theme.spacing(3)}>
         Recommendations
       </Heading>
@@ -46,7 +44,7 @@ const Recommendations = () => {
         </a>
         .
       </small>
-    </Component>
+    </S.Wrapper>
   )
 }
 

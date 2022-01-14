@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Component = styled.article`
-  margin-bottom: ${(props) => (props.mb ? props.mb : props.theme.spacing(2.5))};
+export const Wrapper = styled.article`
+  margin-bottom: ${(p) => p.$mb || p.theme.spacing(2.5)};
   padding: ${({ theme }) => theme.spacing(3)};
   background-color: var(--color-surface);
   border-radius: 8px;

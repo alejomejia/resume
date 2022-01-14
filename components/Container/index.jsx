@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import { Container as Component } from './styled'
+import * as S from './styled'
 
 const Container = ({ children }) => {
-  return <Component>{children}</Component>
+  return <S.Wrapper>{children}</S.Wrapper>
 }
 
 Container.propTypes = {

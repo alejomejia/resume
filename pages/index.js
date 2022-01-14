@@ -1,35 +1,33 @@
 // Handle Theme switch
-import { useContext } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { store } from '../context/store'
 
-import GlobalCSS from '../styles/global'
-import GENERAL from '../styles/themes/general'
+import GlobalCSS from 'styles/global'
+import GENERAL from 'styles/themes/general'
 
 // Components
-import Head from '../components/Head'
-import Container from '../components/Container'
-import Float from '../components/Float'
-import PageGrid from '../components/PageGrid'
+import Head from 'components/Head'
+import Container from 'components/Container'
+import Float from 'components/Float'
+import PageGrid from 'components/PageGrid'
 
-import Intro from '../components/Intro'
-import Skills from '../components/Skills'
-import Education from '../components/Education'
-import Languages from '../components/Languages'
-import Social from '../components/Social'
+import Intro from 'components/Intro'
+import Skills from 'components/Skills'
+import Education from 'components/Education'
+import Languages from 'components/Languages'
+import Social from 'components/Social'
 
-import About from '../components/About'
-import Experience from '../components/Experience'
-import Portfolio from '../components/Portfolio'
-import Recommendations from '../components/Recommendations'
+import About from 'components/About'
+import Experience from 'components/Experience'
+import Portfolio from 'components/Portfolio'
+import Recommendations from 'components/Recommendations'
 
-import Footer from '../components/Footer'
+import Footer from 'components/Footer'
 
 const Home = () => {
   return (
     <ThemeProvider theme={GENERAL}>
       <GlobalCSS />
-      <Head title="Resume :: Alejandro Mejia" />
+      <Head title="Resume :: Alejandro Mejía" />
       <Container>
         <Float />
         <PageGrid>

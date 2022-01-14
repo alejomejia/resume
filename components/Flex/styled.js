@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   display: flex;
-  gap: ${(props) => props.gap};
-  align-items: ${(props) => props.align};
-  justify-content: ${(props) => props.justify};
-  flex-direction: ${(props) => props.direction};
-  flex-wrap: ${(props) => props.wrap};
+  gap: ${(p) => p.$gap};
+  align-items: ${(p) => p.$align};
+  justify-content: ${(p) => p.$justify};
+  flex-direction: ${(p) => p.$direction};
+  flex-wrap: ${(p) => p.$wrap};
 `

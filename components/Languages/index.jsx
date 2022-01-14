@@ -5,13 +5,13 @@ import Heading from 'components/Heading'
 import Flex from 'components/Flex'
 import Tag from 'components/Tag'
 
-import { Component } from './styled'
+import * as S from './styled'
 
 const Languages = ({}) => {
   const theme = useContext(ThemeContext)
 
   return (
-    <Component className="languages">
+    <S.Wrapper>
       <Heading as="h3" icon="chat" mb={theme.spacing(1.5)}>
         Languages
       </Heading>
@@ -19,7 +19,7 @@ const Languages = ({}) => {
         <Tag>English - Advanced</Tag>
         <Tag>Spanish - Native</Tag>
       </Flex>
-    </Component>
+    </S.Wrapper>
   )
 }
 

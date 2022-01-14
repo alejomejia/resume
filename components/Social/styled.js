@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Component = styled.div`
+export const Wrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(6)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -13,10 +13,6 @@ export const Component = styled.div`
     padding-left: ${({ theme }) => theme.spacing(2)};
     padding-right: ${({ theme }) => theme.spacing(2)};
     margin-bottom: ${({ theme }) => theme.spacing(3)};
-
-    h3.heading .heading__title {
-      font-size: ${({ theme }) => theme.fonts.size.l};
-    }
   }
 `
 

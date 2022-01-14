@@ -1,6 +1,6 @@
-import Box from '../../Box'
-import Flex from '../../Flex'
-import Skeleton from '../../Skeleton'
+import Box from 'components/Box'
+import Flex from 'components/Flex'
+import Skeleton from 'components/Skeleton'
 
 const SkeletonRecommendations = () => {
   return (
