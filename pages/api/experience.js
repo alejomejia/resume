@@ -12,7 +12,7 @@ export default function handler(req, res) {
         'I help companies and startups develop and mantain websites and design system components in ReactJS and Storybook. I build the application layouts, make it responsive and improve the user experience and user interface. In some cases I provide a full service by creating the designs as well.'
     },
     {
-      id: 5,
+      id: 7,
       image: '/experience/le-polish-bureau.png',
       title: 'Frontend Developer',
       at: 'LePolishBureau',
