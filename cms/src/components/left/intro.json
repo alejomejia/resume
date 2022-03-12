@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_component_intros",
+  "info": {
+    "displayName": "Intro",
+    "icon": "hand-paper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "jobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
