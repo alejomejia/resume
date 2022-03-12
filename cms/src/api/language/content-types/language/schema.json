@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "singularName": "language",
+    "pluralName": "languages",
+    "displayName": "Language"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "English",
+        "Spanish"
+      ]
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "Basic",
+        "Intermediate",
+        "Advanced",
+        "Native"
+      ]
+    }
+  }
+}
