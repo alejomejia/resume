@@ -43,9 +43,8 @@ const About = () => {
         <S.Content>
           <p>
             I’m a passionate, proactive, with keen eye for details,{' '}
-            <strong>Frontend Developer</strong> focused on UI UX and
-            interactions with 8 years of experience. My passion is to build and
-            maintain <strong>websites and applications</strong> in{' '}
+            <strong>Frontend Developer</strong> with 8 years of experience in the IT industry. 
+            My passion is to build and maintain <strong>websites and applications</strong> in{' '}
             <strong>NextJS / ReactJS and Storybook</strong>, working together
             with design and development teams.
           </p>
